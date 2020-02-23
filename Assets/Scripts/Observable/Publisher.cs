@@ -27,5 +27,6 @@ public class Publisher
 
 public enum PublisherEvent
 {
-    TestNotify
+    BuiltWall,
+    MouseOverBuildableCell
 }

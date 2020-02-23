@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Pathfinder
 {
     public static List<GridCell> path;
-    private static GridCreator gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<GridCreator>();
+    private static Grid gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
     private static  List<GridCell> gridCells = gridCreator.gridCells;
     private static  List<GridCell> openCells;
     private static  List<GridCell> closedCells;
@@ -36,8 +36,6 @@ public static class Pathfinder
 
     public static List<GridCell> FindPath(int startX, int startZ, int endX, int endZ)
     {
-        gridCreator.ResetGridColors();
-
         GridCell startCell = GetCell(startX, startZ);
         GridCell endCell = GetCell(endX, endZ);
 
@@ -111,6 +109,16 @@ public static class Pathfinder
         }
     }
 
+    public static void DrawPath(List<GridCell> incomingPath, Color col)
+    {
+        if (incomingPath != null){
+            foreach (GridCell cell in incomingPath)
+            {
+                cell.SetColor(col);
+            }
+        }
+    }
+
     private static  int CalculateDistance(GridCell a, GridCell b)
     {
         float xDistance = Mathf.Abs(a.gameObject.transform.localPosition.x - b.gameObject.transform.localPosition.x);
@@ -138,26 +146,10 @@ public static class Pathfinder
         if (currentCell.x - 1 >= 0)
         {
             neighborList.Add(GetCell(currentCell.x - 1, currentCell.z));
-            if (currentCell.z - 1 >= 0)
-            {
-                neighborList.Add(GetCell(currentCell.x - 1, currentCell.z - 1));
-            }
-            if (currentCell.z + 1 <= gridCreator.GetGridSize().z)
-            {
-                neighborList.Add(GetCell(currentCell.x - 1, currentCell.z + 1));
-            }
         }
         if (currentCell.x + 1 <= gridCreator.GetGridSize().x)
         {
             neighborList.Add(GetCell(currentCell.x + 1, currentCell.z));
-            if (currentCell.z - 1 >= 0)
-            {
-                neighborList.Add(GetCell(currentCell.x + 1, currentCell.z - 1));
-            }
-            if (currentCell.z + 1 <= gridCreator.GetGridSize().z)
-            {
-                neighborList.Add(GetCell(currentCell.x + 1, currentCell.z + 1));
-            }
         }
         if (currentCell.z - 1 >= 0)
         {
@@ -189,7 +181,6 @@ public static class Pathfinder
         instancePath.Reverse();
 
         path = instancePath;
-        DrawPath();
         
         return instancePath;
     }

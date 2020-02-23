@@ -11,7 +11,6 @@ public class GridCell : MonoBehaviour
 
     private Renderer rend;
     private Color color;
-
     private Publisher publisher;
 
     void Start()
@@ -30,11 +29,27 @@ public class GridCell : MonoBehaviour
         if (this.buildable)
         {
             rend.material.color = Color.green;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.up,out hit, 10))
+            {
+                Debug.Log("Hit");
+                if (hit.transform.gameObject.tag == "GridTempFloor"){
+                    hit.transform.gameObject.GetComponent<GridCell>().passable = false;
+                }
+            }
+            publisher.Notify(PublisherEvent.MouseOverBuildableCell);
         }
     }
 
     void OnMouseExit()
     {
+        RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.up,out hit, 1))
+            {
+                if (hit.transform.gameObject.tag == "GridTempFloor"){
+                    hit.transform.gameObject.GetComponent<GridCell>().passable = true;
+                }
+            }
         rend.material.color = color;
     }
 
@@ -43,9 +58,18 @@ public class GridCell : MonoBehaviour
         if (this.buildable)
         {
             this.passable = !this.passable;
-            this.color = this.passable ? Color.white : Color.black;
+            this.color = this.passable ? Color.white : Color.grey;
+            this.transform.localScale = this.passable ? this.transform.localScale  -= new Vector3(0, 0.5f , 0) : this.transform.localScale  += new Vector3(0, 0.5f , 0);
+            this.transform.localPosition = this.passable ? this.transform.localPosition  -= new Vector3(0, 0.25f , 0) : this.transform.localPosition  += new Vector3(0, 0.25f , 0);
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.up,out hit, 1))
+            {
+                if (hit.transform.gameObject.tag == "GridTempFloor"){
+                    hit.transform.gameObject.GetComponent<GridCell>().passable = false;
+                }
+            }
             rend.material.color = color;
-            publisher.Notify(PublisherEvent.TestNotify);
+            publisher.Notify(PublisherEvent.BuiltWall);
         }
     }
 
