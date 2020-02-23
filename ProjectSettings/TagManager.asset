@@ -9,6 +9,8 @@ TagManager:
   - EnemyUnit
   - FriendlyUnit
   - GridFloor
+  - GridTempFloor
+  - GridTempHolder
   layers:
   - Default
   - TransparentFX

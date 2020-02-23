@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyUnitScript : MonoBehaviour, Observer
 {
-    public int speed;
-    public int attackSpeed;
+    public float speed;
+    public float attackSpeed;
     public int damage;
     [SerializeField]
     private BaseScript target;
@@ -13,7 +13,9 @@ public class EnemyUnitScript : MonoBehaviour, Observer
     private GridCell currentCell;
     private List<Vector3> pathVectorList;
     private int currentPathIndex;
+    [SerializeField]
     private bool moving;
+    [SerializeField]
     private bool attacking;
     private float timeToAttack;
 
@@ -24,7 +26,7 @@ public class EnemyUnitScript : MonoBehaviour, Observer
         gridHolder = GameObject.FindGameObjectsWithTag("GridHolder")[0];
         SetTargetPosition(target.transform.position);
 
-        foreach(GridCell cell in gridHolder.GetComponent<GridCreator>().gridCells)
+        foreach(GridCell cell in gridHolder.GetComponent<Grid>().gridCells)
         {
             cell.AddObserver(this);
         }
@@ -46,7 +48,7 @@ public class EnemyUnitScript : MonoBehaviour, Observer
     {
         switch(ev)
         {
-            case PublisherEvent.TestNotify:
+            case PublisherEvent.BuiltWall:
                 SetTargetPosition(target.transform.position);
                 break;
             default:
@@ -59,7 +61,7 @@ public class EnemyUnitScript : MonoBehaviour, Observer
         if (pathVectorList != null)
         {
             Vector3 targetPosition = pathVectorList[currentPathIndex];
-            if (Vector3.Distance(transform.position, targetPosition) > 0.3f)
+            if (Vector3.Distance(transform.position, targetPosition) > 0.01f)
             {
                 Vector3 moveDir = (targetPosition - transform.position).normalized;
 
