@@ -28,9 +28,9 @@ public class Pathfinder : MonoBehaviour
         openCells = new List<GridCell>() { startCell };
         closedCells = new List<GridCell>();
 
-        for (int x = 0; x < gridCreator.GetGridSize().x; x++)
+        for (int x = 0; x <= gridCreator.GetGridSize().x; x++)
         {
-            for (int z = 0; z < gridCreator.GetGridSize().z; z++)
+            for (int z = 0; z <= gridCreator.GetGridSize().z; z++)
             {
                 GridCell cell = GetCell(x, z);
                 cell.gCost = int.MaxValue;
@@ -65,8 +65,6 @@ public class Pathfinder : MonoBehaviour
                     closedCells.Add(neighbor);
                     continue;
                 }
-
-                Debug.Log(closedCells);
 
                 int tentativeGCost = currentCell.gCost + CalculateDistance(currentCell, neighbor);
                 if (tentativeGCost < neighbor.gCost)
