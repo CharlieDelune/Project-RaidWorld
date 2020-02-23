@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Base
   - GridHolder
+  - EnemyUnit
+  - FriendlyUnit
+  - GridFloor
   layers:
   - Default
   - TransparentFX

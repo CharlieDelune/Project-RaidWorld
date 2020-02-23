@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 10571645}
   m_Layer: 0
   m_Name: GridFloor(Clone) (85)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 13164569}
   m_Layer: 0
   m_Name: GridFloor(Clone) (84)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -368,7 +370,7 @@ GameObject:
   - component: {fileID: 15868830}
   m_Layer: 0
   m_Name: GridFloor(Clone) (35)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -483,7 +486,7 @@ GameObject:
   - component: {fileID: 45472862}
   m_Layer: 0
   m_Name: GridFloor(Clone) (22)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -583,6 +587,158 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45472860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &49451241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49451242}
+  - component: {fileID: 49451244}
+  - component: {fileID: 49451243}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &49451242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49451241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 858415928}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 150, y: 75}
+  m_SizeDelta: {x: 400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &49451243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49451241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Base Health: ##'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_isAlignmentEnumConverted: 1
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 49451243}
+    characterCount: 15
+    spriteCount: 0
+    spaceCount: 2
+    wordCount: 2
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &49451244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49451241}
+  m_CullTransparentMesh: 0
 --- !u!1 &87282966
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +754,7 @@ GameObject:
   - component: {fileID: 87282968}
   m_Layer: 0
   m_Name: GridFloor(Clone) (86)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,6 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -713,7 +870,7 @@ GameObject:
   - component: {fileID: 89913814}
   m_Layer: 0
   m_Name: GridFloor(Clone) (30)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,6 +902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -828,7 +986,7 @@ GameObject:
   - component: {fileID: 105746044}
   m_Layer: 0
   m_Name: GridFloor(Clone) (19)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,6 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -943,7 +1102,7 @@ GameObject:
   - component: {fileID: 106791323}
   m_Layer: 0
   m_Name: GridFloor(Clone) (75)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,6 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1150,7 +1310,7 @@ GameObject:
   - component: {fileID: 118205170}
   m_Layer: 0
   m_Name: GridFloor(Clone) (78)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,6 +1342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1265,7 +1426,7 @@ GameObject:
   - component: {fileID: 124752292}
   m_Layer: 0
   m_Name: GridFloor(Clone) (10)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1297,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1380,7 +1542,7 @@ GameObject:
   - component: {fileID: 129097850}
   m_Layer: 0
   m_Name: GridFloor(Clone) (5)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,6 +1574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1495,7 +1658,7 @@ GameObject:
   - component: {fileID: 159955065}
   m_Layer: 0
   m_Name: GridFloor(Clone) (87)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1527,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1610,7 +1774,7 @@ GameObject:
   - component: {fileID: 192081681}
   m_Layer: 0
   m_Name: GridFloor(Clone) (7)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1642,6 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1725,7 +1890,7 @@ GameObject:
   - component: {fileID: 209405452}
   m_Layer: 0
   m_Name: GridFloor(Clone) (31)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,6 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1840,7 +2006,7 @@ GameObject:
   - component: {fileID: 212418848}
   m_Layer: 0
   m_Name: GridFloor(Clone) (91)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1872,6 +2038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -1955,7 +2122,7 @@ GameObject:
   - component: {fileID: 238824800}
   m_Layer: 0
   m_Name: GridFloor(Clone) (51)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1987,6 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2070,7 +2238,7 @@ GameObject:
   - component: {fileID: 259396008}
   m_Layer: 0
   m_Name: GridFloor(Clone) (37)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2102,6 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2185,7 +2354,7 @@ GameObject:
   - component: {fileID: 276374568}
   m_Layer: 0
   m_Name: GridFloor(Clone) (21)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2217,6 +2386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2300,7 +2470,7 @@ GameObject:
   - component: {fileID: 295080348}
   m_Layer: 0
   m_Name: GridFloor(Clone) (54)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2332,6 +2502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2664,7 +2835,7 @@ GameObject:
   - component: {fileID: 334499641}
   m_Layer: 0
   m_Name: GridFloor(Clone) (65)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2696,6 +2867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2779,7 +2951,7 @@ GameObject:
   - component: {fileID: 351236852}
   m_Layer: 0
   m_Name: GridFloor(Clone) (96)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2811,6 +2983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -2894,7 +3067,7 @@ GameObject:
   - component: {fileID: 362201206}
   m_Layer: 0
   m_Name: GridFloor(Clone) (4)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2926,6 +3099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3009,7 +3183,7 @@ GameObject:
   - component: {fileID: 374897539}
   m_Layer: 0
   m_Name: GridFloor(Clone) (68)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3041,6 +3215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3124,7 +3299,7 @@ GameObject:
   - component: {fileID: 412477371}
   m_Layer: 0
   m_Name: GridFloor(Clone) (2)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,6 +3331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3239,7 +3415,7 @@ GameObject:
   - component: {fileID: 418998966}
   m_Layer: 0
   m_Name: GridFloor(Clone) (57)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3271,6 +3447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3354,7 +3531,7 @@ GameObject:
   - component: {fileID: 420630465}
   m_Layer: 0
   m_Name: GridFloor(Clone) (94)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3386,6 +3563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3469,7 +3647,7 @@ GameObject:
   - component: {fileID: 427673135}
   m_Layer: 0
   m_Name: GridFloor(Clone) (55)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3501,6 +3679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3584,7 +3763,7 @@ GameObject:
   - component: {fileID: 466595017}
   m_Layer: 0
   m_Name: GridFloor(Clone) (56)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3616,6 +3795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3699,7 +3879,7 @@ GameObject:
   - component: {fileID: 469469641}
   m_Layer: 0
   m_Name: GridFloor(Clone) (73)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3731,6 +3911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3814,7 +3995,7 @@ GameObject:
   - component: {fileID: 494719782}
   m_Layer: 0
   m_Name: GridFloor(Clone) (16)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3846,6 +4027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -3929,7 +4111,7 @@ GameObject:
   - component: {fileID: 554978523}
   m_Layer: 0
   m_Name: GridFloor(Clone) (90)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3961,6 +4143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4044,7 +4227,7 @@ GameObject:
   - component: {fileID: 570957050}
   m_Layer: 0
   m_Name: GridFloor(Clone) (17)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4076,6 +4259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4159,7 +4343,7 @@ GameObject:
   - component: {fileID: 614602749}
   m_Layer: 0
   m_Name: GridFloor(Clone) (44)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4191,6 +4375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4274,7 +4459,7 @@ GameObject:
   - component: {fileID: 618879898}
   m_Layer: 0
   m_Name: GridFloor(Clone) (95)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4306,6 +4491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4386,9 +4572,10 @@ GameObject:
   - component: {fileID: 625149691}
   - component: {fileID: 625149690}
   - component: {fileID: 625149689}
+  - component: {fileID: 625149692}
   - component: {fileID: 625149688}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Base
   m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4401,11 +4588,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625149686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 0.5, y: 3, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.29999998, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.29999998, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1348836991}
+  m_Father: {fileID: 1383433799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &625149688
@@ -4420,6 +4607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f994f71fe8ffe4a9b200cab0dbbf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
 --- !u!136 &625149689
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4430,7 +4618,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -4453,7 +4641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 05f7461a48a2ca444a9fbb7af52a93b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4483,6 +4671,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625149686}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &625149692
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625149686}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &629048905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,7 +4702,7 @@ GameObject:
   - component: {fileID: 629048907}
   m_Layer: 0
   m_Name: GridFloor(Clone) (98)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4530,6 +4734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4613,7 +4818,7 @@ GameObject:
   - component: {fileID: 643292003}
   m_Layer: 0
   m_Name: GridFloor(Clone) (41)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4645,6 +4850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4728,7 +4934,7 @@ GameObject:
   - component: {fileID: 645215710}
   m_Layer: 0
   m_Name: GridFloor(Clone) (52)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4760,6 +4966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4843,7 +5050,7 @@ GameObject:
   - component: {fileID: 693700257}
   m_Layer: 0
   m_Name: GridFloor(Clone) (70)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4875,6 +5082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -4958,7 +5166,7 @@ GameObject:
   - component: {fileID: 699955332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (29)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4990,6 +5198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5073,7 +5282,7 @@ GameObject:
   - component: {fileID: 740916332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (58)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5105,6 +5314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5188,7 +5398,7 @@ GameObject:
   - component: {fileID: 800352103}
   m_Layer: 0
   m_Name: GridFloor(Clone) (8)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5220,6 +5430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5288,6 +5499,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800352101}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &858415927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858415928}
+  - component: {fileID: 858415932}
+  - component: {fileID: 858415931}
+  - component: {fileID: 858415930}
+  - component: {fileID: 858415929}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &858415928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858415927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 49451242}
+  m_Father: {fileID: 1430240584}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &858415929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858415927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531ecb7c9c395d849a22d2b45b6cfa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 49451243}
+  baseInfo: {fileID: 625149688}
+--- !u!114 &858415930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858415927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &858415931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858415927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &858415932
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858415927}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &872356835
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,7 +5628,7 @@ GameObject:
   - component: {fileID: 872356837}
   m_Layer: 0
   m_Name: GridFloor(Clone) (25)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5335,6 +5660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5418,7 +5744,7 @@ GameObject:
   - component: {fileID: 872511525}
   m_Layer: 0
   m_Name: GridFloor(Clone) (24)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5450,6 +5776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5533,7 +5860,7 @@ GameObject:
   - component: {fileID: 899572471}
   m_Layer: 0
   m_Name: GridFloor(Clone) (9)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5565,6 +5892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5648,7 +5976,7 @@ GameObject:
   - component: {fileID: 905016524}
   m_Layer: 0
   m_Name: GridFloor(Clone) (97)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5680,6 +6008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5763,7 +6092,7 @@ GameObject:
   - component: {fileID: 905710499}
   m_Layer: 0
   m_Name: GridFloor(Clone) (38)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5795,6 +6124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5863,6 +6193,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905710497}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &911606267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911606270}
+  - component: {fileID: 911606269}
+  - component: {fileID: 911606268}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &911606268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911606267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &911606269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911606267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &911606270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911606267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952112956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,7 +6274,7 @@ GameObject:
   - component: {fileID: 952112958}
   m_Layer: 0
   m_Name: GridFloor(Clone) (61)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5910,6 +6306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -5993,7 +6390,7 @@ GameObject:
   - component: {fileID: 960005067}
   m_Layer: 0
   m_Name: GridFloor(Clone) (53)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6025,6 +6422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6108,7 +6506,7 @@ GameObject:
   - component: {fileID: 970438902}
   m_Layer: 0
   m_Name: GridFloor(Clone) (11)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6140,6 +6538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6223,7 +6622,7 @@ GameObject:
   - component: {fileID: 991323518}
   m_Layer: 0
   m_Name: GridFloor(Clone) (6)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6255,6 +6654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6338,7 +6738,7 @@ GameObject:
   - component: {fileID: 1017837972}
   m_Layer: 0
   m_Name: GridFloor(Clone) (60)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6370,6 +6770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6453,7 +6854,7 @@ GameObject:
   - component: {fileID: 1029659514}
   m_Layer: 0
   m_Name: GridFloor(Clone) (3)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6485,6 +6886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6568,7 +6970,7 @@ GameObject:
   - component: {fileID: 1063849025}
   m_Layer: 0
   m_Name: GridFloor(Clone) (92)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6600,6 +7002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6683,7 +7086,7 @@ GameObject:
   - component: {fileID: 1097943895}
   m_Layer: 0
   m_Name: GridFloor(Clone) (39)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6715,6 +7118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6798,7 +7202,7 @@ GameObject:
   - component: {fileID: 1154796939}
   m_Layer: 0
   m_Name: GridFloor(Clone) (1)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6830,6 +7234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -6913,7 +7318,7 @@ GameObject:
   - component: {fileID: 1178611465}
   m_Layer: 0
   m_Name: GridFloor(Clone) (14)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6945,6 +7350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7028,7 +7434,7 @@ GameObject:
   - component: {fileID: 1190610669}
   m_Layer: 0
   m_Name: GridFloor(Clone) (12)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7060,6 +7466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7143,7 +7550,7 @@ GameObject:
   - component: {fileID: 1212764998}
   m_Layer: 0
   m_Name: GridFloor(Clone) (66)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7175,6 +7582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7258,7 +7666,7 @@ GameObject:
   - component: {fileID: 1238965015}
   m_Layer: 0
   m_Name: GridFloor(Clone) (64)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7290,6 +7698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7373,7 +7782,7 @@ GameObject:
   - component: {fileID: 1294789774}
   m_Layer: 0
   m_Name: GridFloor(Clone) (67)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7405,6 +7814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7488,7 +7898,7 @@ GameObject:
   - component: {fileID: 1298742124}
   m_Layer: 0
   m_Name: GridFloor(Clone) (13)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7520,6 +7930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7603,7 +8014,7 @@ GameObject:
   - component: {fileID: 1301744346}
   m_Layer: 0
   m_Name: GridFloor(Clone) (27)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7635,6 +8046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7718,7 +8130,7 @@ GameObject:
   - component: {fileID: 1306410119}
   m_Layer: 0
   m_Name: GridFloor(Clone) (36)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7750,6 +8162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7833,7 +8246,7 @@ GameObject:
   - component: {fileID: 1340017265}
   m_Layer: 0
   m_Name: GridFloor(Clone) (72)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7865,6 +8278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -7948,7 +8362,7 @@ GameObject:
   - component: {fileID: 1348836992}
   m_Layer: 0
   m_Name: GridFloor(Clone)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7963,8 +8377,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.099999994, z: 1}
-  m_Children:
-  - {fileID: 625149687}
+  m_Children: []
   m_Father: {fileID: 318706265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7981,6 +8394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8064,7 +8478,7 @@ GameObject:
   - component: {fileID: 1367445180}
   m_Layer: 0
   m_Name: GridFloor(Clone) (50)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8096,6 +8510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8164,6 +8579,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367445178}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1383433798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383433799}
+  m_Layer: 0
+  m_Name: UnitHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383433799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383433798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 625149687}
+  - {fileID: 1898523648}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390506204
 GameObject:
   m_ObjectHideFlags: 0
@@ -8262,7 +8709,7 @@ GameObject:
   - component: {fileID: 1392221814}
   m_Layer: 0
   m_Name: GridFloor(Clone) (20)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8294,6 +8741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8377,7 +8825,7 @@ GameObject:
   - component: {fileID: 1420348147}
   m_Layer: 0
   m_Name: GridFloor(Clone) (15)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8409,6 +8857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8477,6 +8926,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420348145}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1430240583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430240584}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1430240584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430240583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.20402063, y: 0.3379393, z: 0.9605935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 858415928}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493855804
 GameObject:
   m_ObjectHideFlags: 0
@@ -8492,7 +8972,7 @@ GameObject:
   - component: {fileID: 1493855806}
   m_Layer: 0
   m_Name: GridFloor(Clone) (80)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8524,6 +9004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8607,7 +9088,7 @@ GameObject:
   - component: {fileID: 1547087215}
   m_Layer: 0
   m_Name: GridFloor(Clone) (48)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8639,6 +9120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8722,7 +9204,7 @@ GameObject:
   - component: {fileID: 1549104264}
   m_Layer: 0
   m_Name: GridFloor(Clone) (40)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8754,6 +9236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8837,7 +9320,7 @@ GameObject:
   - component: {fileID: 1620222050}
   m_Layer: 0
   m_Name: GridFloor(Clone) (76)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8869,6 +9352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -8952,7 +9436,7 @@ GameObject:
   - component: {fileID: 1635650291}
   m_Layer: 0
   m_Name: GridFloor(Clone) (23)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8984,6 +9468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9067,7 +9552,7 @@ GameObject:
   - component: {fileID: 1645306658}
   m_Layer: 0
   m_Name: GridFloor(Clone) (81)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9099,6 +9584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9182,7 +9668,7 @@ GameObject:
   - component: {fileID: 1686002723}
   m_Layer: 0
   m_Name: GridFloor(Clone) (32)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9214,6 +9700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9297,7 +9784,7 @@ GameObject:
   - component: {fileID: 1699149341}
   m_Layer: 0
   m_Name: GridFloor(Clone) (77)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9329,6 +9816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9412,7 +9900,7 @@ GameObject:
   - component: {fileID: 1741123801}
   m_Layer: 0
   m_Name: GridFloor(Clone) (99)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9427,8 +9915,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9, y: 0, z: 9}
   m_LocalScale: {x: 1, y: 0.099999994, z: 1}
-  m_Children:
-  - {fileID: 1898523648}
+  m_Children: []
   m_Father: {fileID: 318706265}
   m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9445,6 +9932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9528,7 +10016,7 @@ GameObject:
   - component: {fileID: 1763188693}
   m_Layer: 0
   m_Name: GridFloor(Clone) (45)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9560,6 +10048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9643,7 +10132,7 @@ GameObject:
   - component: {fileID: 1765001416}
   m_Layer: 0
   m_Name: GridFloor(Clone) (26)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9675,6 +10164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9758,7 +10248,7 @@ GameObject:
   - component: {fileID: 1775083920}
   m_Layer: 0
   m_Name: GridFloor(Clone) (33)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9790,6 +10280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9873,7 +10364,7 @@ GameObject:
   - component: {fileID: 1784310626}
   m_Layer: 0
   m_Name: GridFloor(Clone) (82)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9905,6 +10396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -9988,7 +10480,7 @@ GameObject:
   - component: {fileID: 1802335163}
   m_Layer: 0
   m_Name: GridFloor(Clone) (59)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10020,6 +10512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10103,7 +10596,7 @@ GameObject:
   - component: {fileID: 1812701933}
   m_Layer: 0
   m_Name: GridFloor(Clone) (93)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10135,6 +10628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10218,7 +10712,7 @@ GameObject:
   - component: {fileID: 1866377634}
   m_Layer: 0
   m_Name: GridFloor(Clone) (74)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10250,6 +10744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10333,7 +10828,7 @@ GameObject:
   - component: {fileID: 1870919583}
   m_Layer: 0
   m_Name: GridFloor(Clone) (46)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10365,6 +10860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10448,7 +10944,7 @@ GameObject:
   - component: {fileID: 1895516853}
   m_Layer: 0
   m_Name: GridFloor(Clone) (34)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10480,6 +10976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10563,7 +11060,7 @@ GameObject:
   - component: {fileID: 1897994472}
   m_Layer: 0
   m_Name: GridFloor(Clone) (28)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10595,6 +11092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10678,8 +11176,8 @@ GameObject:
   - component: {fileID: 1898523653}
   - component: {fileID: 1898523649}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: EnemyUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10692,11 +11190,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898523647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 0.5, y: 3, z: 0.5}
+  m_LocalPosition: {x: 9, y: 0.29999998, z: 9}
+  m_LocalScale: {x: 0.5, y: 0.29999998, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1741123800}
-  m_RootOrder: 0
+  m_Father: {fileID: 1383433799}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1898523649
 MonoBehaviour:
@@ -10710,6 +11208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78113de290ef3a04aadfaa67ff833a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  attackSpeed: 2
+  damage: 1
   target: {fileID: 0}
 --- !u!136 &1898523650
 CapsuleCollider:
@@ -10744,7 +11245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 277fb03c6da1fbe44898ffa539cbdb88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10774,18 +11275,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898523647}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1898523653
-MonoBehaviour:
+--- !u!54 &1898523653
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898523647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878f76211a8dcdd4e8bef3e80493aa18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1910782859
 GameObject:
   m_ObjectHideFlags: 0
@@ -10801,7 +11306,7 @@ GameObject:
   - component: {fileID: 1910782861}
   m_Layer: 0
   m_Name: GridFloor(Clone) (18)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10833,6 +11338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -10916,7 +11422,7 @@ GameObject:
   - component: {fileID: 1944310910}
   m_Layer: 0
   m_Name: GridFloor(Clone) (49)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10948,6 +11454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11031,7 +11538,7 @@ GameObject:
   - component: {fileID: 1955909216}
   m_Layer: 0
   m_Name: GridFloor(Clone) (42)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11063,6 +11570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11146,7 +11654,7 @@ GameObject:
   - component: {fileID: 1973298721}
   m_Layer: 0
   m_Name: GridFloor(Clone) (63)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11178,6 +11686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11261,7 +11770,7 @@ GameObject:
   - component: {fileID: 1982735786}
   m_Layer: 0
   m_Name: GridFloor(Clone) (83)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11293,6 +11802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11376,7 +11886,7 @@ GameObject:
   - component: {fileID: 1999474358}
   m_Layer: 0
   m_Name: GridFloor(Clone) (88)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11408,6 +11918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11491,7 +12002,7 @@ GameObject:
   - component: {fileID: 2047485332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (62)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11523,6 +12034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11606,7 +12118,7 @@ GameObject:
   - component: {fileID: 2105094901}
   m_Layer: 0
   m_Name: GridFloor(Clone) (79)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11638,6 +12150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11721,7 +12234,7 @@ GameObject:
   - component: {fileID: 2105672758}
   m_Layer: 0
   m_Name: GridFloor(Clone) (43)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11753,6 +12266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11836,7 +12350,7 @@ GameObject:
   - component: {fileID: 2111954682}
   m_Layer: 0
   m_Name: GridFloor(Clone) (71)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11868,6 +12382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -11951,7 +12466,7 @@ GameObject:
   - component: {fileID: 2128992917}
   m_Layer: 0
   m_Name: GridFloor(Clone) (69)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11983,6 +12498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -12066,7 +12582,7 @@ GameObject:
   - component: {fileID: 2137687684}
   m_Layer: 0
   m_Name: GridFloor(Clone) (89)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12098,6 +12614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0
@@ -12181,7 +12698,7 @@ GameObject:
   - component: {fileID: 2137785717}
   m_Layer: 0
   m_Name: GridFloor(Clone) (47)
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12213,6 +12730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passable: 1
+  buildable: 0
   x: 0
   z: 0
   gCost: 0

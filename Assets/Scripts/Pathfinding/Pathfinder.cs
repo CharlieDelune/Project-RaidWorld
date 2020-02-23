@@ -2,23 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pathfinder : MonoBehaviour
+public static class Pathfinder
 {
-    private GridCreator gridCreator;
-    private List<GridCell> gridCells;
-    private List<GridCell> openCells;
-    private List<GridCell> closedCells;
+    private static GridCreator gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<GridCreator>();
+    private static  List<GridCell> gridCells = gridCreator.gridCells;
+    private static  List<GridCell> openCells;
+    private static  List<GridCell> closedCells;
 
     private const int MOVE_STRAIGHT_COST = 10;
     private const int MOVE_DIAGONAL_COST = 14;
 
-    void Start()
+    public static List<Vector3> FindPath(Vector3 startWorldPosition, Vector3 endWorldPosition)
     {
-        gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<GridCreator>();
-        gridCells = gridCreator.gridCells;
+        GridCell startCell = gridCreator.GetGridCell((int)Mathf.Floor(startWorldPosition.x), (int)Mathf.Floor(startWorldPosition.z));
+        GridCell endCell = gridCreator.GetGridCell((int)Mathf.Floor(endWorldPosition.x), (int)Mathf.Floor(endWorldPosition.z));
+
+        List<GridCell> path = FindPath(startCell.x, startCell.z, endCell.x, endCell.z);
+        if (path == null)
+        {
+            return null;
+        }
+        else
+        {
+            List<Vector3> vectorPath = new List<Vector3>();
+            foreach (GridCell cell in path)
+            {
+                vectorPath.Add(new Vector3(cell.x, startWorldPosition.y, cell.z));
+            }
+            return vectorPath;
+        }
     }
 
-    public List<GridCell> FindPath(int startX, int startZ, int endX, int endZ)
+    public static List<GridCell> FindPath(int startX, int startZ, int endX, int endZ)
     {
         gridCreator.ResetGridColors();
 
@@ -60,7 +75,7 @@ public class Pathfinder : MonoBehaviour
                 {
                     continue;
                 }
-                if (!neighbor.IsPassable())
+                if (!neighbor.passable)
                 {
                     closedCells.Add(neighbor);
                     continue;
@@ -85,7 +100,7 @@ public class Pathfinder : MonoBehaviour
         return null;
     }
 
-    private int CalculateDistance(GridCell a, GridCell b)
+    private static  int CalculateDistance(GridCell a, GridCell b)
     {
         float xDistance = Mathf.Abs(a.gameObject.transform.localPosition.x - b.gameObject.transform.localPosition.x);
         float zDistance = Mathf.Abs(a.gameObject.transform.localPosition.z - b.gameObject.transform.localPosition.z);
@@ -93,7 +108,7 @@ public class Pathfinder : MonoBehaviour
         return (int)(MOVE_DIAGONAL_COST * Mathf.Min(xDistance, zDistance) + MOVE_STRAIGHT_COST * remaining);
     }
 
-    private GridCell GetLowestFCostCell(List<GridCell> gridCellList)
+    private static  GridCell GetLowestFCostCell(List<GridCell> gridCellList)
     {
         GridCell lowestFCostCell = gridCellList[0];
         for (int i = 1; i < gridCellList.Count; i++)
@@ -106,7 +121,7 @@ public class Pathfinder : MonoBehaviour
         return lowestFCostCell;
     }
 
-    private List<GridCell> GetNeighborList(GridCell currentCell)
+    private static  List<GridCell> GetNeighborList(GridCell currentCell)
     {
         List<GridCell> neighborList = new List<GridCell>();
         if (currentCell.x - 1 >= 0)
@@ -142,23 +157,15 @@ public class Pathfinder : MonoBehaviour
             neighborList.Add(GetCell(currentCell.x, currentCell.z + 1));
         }
 
-        foreach(GridCell cell in neighborList)
-        {
-            if(cell.IsPassable())
-            {
-                cell.SetColor(Color.yellow);
-            }
-        }
-
         return neighborList;
     }
 
-    private GridCell GetCell(int x, int z)
+    private static  GridCell GetCell(int x, int z)
     {
         return gridCreator.GetGridCell(x, z);
     }
 
-    private List<GridCell> CalculatePath(GridCell endCell)
+    private static  List<GridCell> CalculatePath(GridCell endCell)
     {
         List<GridCell> path = new List<GridCell>();
         path.Add(endCell);
@@ -169,6 +176,14 @@ public class Pathfinder : MonoBehaviour
             currentCell = currentCell.previousCell;
         }
         path.Reverse();
+
+        if (path != null){
+            foreach (GridCell cell in path)
+            {
+                cell.SetColor(Color.blue);
+            }
+        }
+        
         return path;
     }
 }
