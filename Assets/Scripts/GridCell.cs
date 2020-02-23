@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class GridCell : MonoBehaviour
 {
-    private Renderer rend;
-    [SerializeField]
-    private bool passable;
-    private Color color;
+    public bool passable;
+    public bool buildable;
     public int x, z, gCost, hCost, fCost;
     public GridCell previousCell;
-    // Start is called before the first frame update
+
+    private Renderer rend;
+    private Color color;
+
     void Start()
     {
         rend =GetComponent<Renderer>();
         color = Color.white;
         passable = true;
+        buildable = true;
         this.x = (int)this.gameObject.transform.localPosition.x;
         this.z = (int)this.gameObject.transform.localPosition.z;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     void OnMouseEnter()
     {
-        rend.material.color = Color.green;
+        if (this.buildable)
+        {
+            rend.material.color = Color.green;
+        }
     }
 
     void OnMouseExit()
@@ -37,9 +37,12 @@ public class GridCell : MonoBehaviour
 
     void OnMouseDown()
     {
-        this.passable = !this.passable;
-        this.color = this.passable ? Color.white : Color.black;
-        rend.material.color = color;
+        if (this.buildable)
+        {
+            this.passable = !this.passable;
+            this.color = this.passable ? Color.white : Color.black;
+            rend.material.color = color;
+        }
     }
 
     public void CalculateFCost()
@@ -49,13 +52,11 @@ public class GridCell : MonoBehaviour
 
     public void SetColor(Color inputColor)
     {
-        color = inputColor;
-        rend.material.color = color;
-    }
-
-    public bool IsPassable()
-    {
-        return this.passable;
+        if (rend != null)
+        {
+            color = inputColor;
+            rend.material.color = color;
+        }
     }
 
     public void ResetCell()

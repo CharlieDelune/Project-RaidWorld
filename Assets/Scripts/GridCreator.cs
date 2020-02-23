@@ -45,7 +45,7 @@ public class GridCreator : MonoBehaviour
     {
         foreach (GridCell cell in gridCells)
         {
-            if(cell.IsPassable())
+            if(cell.passable)
             {
                 cell.SetColor(Color.white);
             }

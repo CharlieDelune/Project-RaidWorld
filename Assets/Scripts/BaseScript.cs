@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class BaseScript : MonoBehaviour
 {
-    private Renderer rend;
-    // Start is called before the first frame update
+    public int health;
+
+    private bool searchingForGrid;
+
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.material.color = Color.green;
+        searchingForGrid = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (searchingForGrid)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
+            {
+                if (hit.transform.gameObject.tag == "GridFloor"){
+                    hit.transform.gameObject.GetComponent<GridCell>().buildable = false;
+                    searchingForGrid = false;
+                }
+            }
+            else{
+                Debug.Log("Base is off the grid!");
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void DealDamage(int damage)
+    {
+        health -= damage;
     }
 }
