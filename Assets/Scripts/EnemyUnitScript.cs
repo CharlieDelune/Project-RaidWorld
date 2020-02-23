@@ -24,9 +24,11 @@ public class EnemyUnitScript : MonoBehaviour
         List<GridCell> path = pathfinder.FindPath((int)this.gameObject.transform.parent.gameObject.transform.localPosition.x, (int)this.gameObject.transform.parent.gameObject.transform.localPosition.z,
             (int)target.gameObject.transform.localPosition.x, (int)target.gameObject.transform.localPosition.z);
 
-        foreach (GridCell cell in path)
-        {
-            cell.SetColor(Color.blue);
+        if (path != null){
+            foreach (GridCell cell in path)
+            {
+                cell.SetColor(Color.blue);
+            }
         }
     }
 }

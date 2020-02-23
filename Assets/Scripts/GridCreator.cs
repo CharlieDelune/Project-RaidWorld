@@ -13,7 +13,7 @@ public class GridCreator : MonoBehaviour
     public List<GridCell> gridCells;
     [SerializeField]
     private int xSize, zSize;
-    // Start is called before the first frame update
+
     void Start()
     {
         if(active){
