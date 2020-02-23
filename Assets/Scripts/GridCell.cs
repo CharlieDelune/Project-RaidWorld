@@ -12,8 +12,11 @@ public class GridCell : MonoBehaviour
     private Renderer rend;
     private Color color;
 
+    private Publisher publisher;
+
     void Start()
     {
+        publisher = new Publisher();
         rend =GetComponent<Renderer>();
         color = Color.white;
         passable = true;
@@ -42,6 +45,7 @@ public class GridCell : MonoBehaviour
             this.passable = !this.passable;
             this.color = this.passable ? Color.white : Color.black;
             rend.material.color = color;
+            publisher.Notify(PublisherEvent.TestNotify);
         }
     }
 
@@ -63,6 +67,11 @@ public class GridCell : MonoBehaviour
     {
         this.SetColor(Color.white);
         this.passable = true;
+    }
+
+    public void AddObserver(Observer observer)
+    {
+        publisher.AddObserver(observer);
     }
 
 }

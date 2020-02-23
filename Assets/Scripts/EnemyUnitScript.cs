@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyUnitScript : MonoBehaviour
+public class EnemyUnitScript : MonoBehaviour, Observer
 {
     public int speed;
     public int attackSpeed;
@@ -23,6 +23,11 @@ public class EnemyUnitScript : MonoBehaviour
         target = GameObject.FindGameObjectsWithTag("Base")[0].GetComponent<BaseScript>();
         gridHolder = GameObject.FindGameObjectsWithTag("GridHolder")[0];
         SetTargetPosition(target.transform.position);
+
+        foreach(GridCell cell in gridHolder.GetComponent<GridCreator>().gridCells)
+        {
+            cell.AddObserver(this);
+        }
     }
 
     void Update()
@@ -37,9 +42,16 @@ public class EnemyUnitScript : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    public void OnNotify(PublisherEvent ev)
     {
-        SetTargetPosition(target.transform.position);
+        switch(ev)
+        {
+            case PublisherEvent.TestNotify:
+                SetTargetPosition(target.transform.position);
+                break;
+            default:
+                break;
+        }
     }
 
     private void HandleMovement()

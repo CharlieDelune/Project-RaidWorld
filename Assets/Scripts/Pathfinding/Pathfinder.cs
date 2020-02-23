@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class Pathfinder
 {
+    public static List<GridCell> path;
     private static GridCreator gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<GridCreator>();
     private static  List<GridCell> gridCells = gridCreator.gridCells;
     private static  List<GridCell> openCells;
@@ -100,6 +101,16 @@ public static class Pathfinder
         return null;
     }
 
+    public static void DrawPath()
+    {
+        if (path != null){
+            foreach (GridCell cell in path)
+            {
+                cell.SetColor(Color.blue);
+            }
+        }
+    }
+
     private static  int CalculateDistance(GridCell a, GridCell b)
     {
         float xDistance = Mathf.Abs(a.gameObject.transform.localPosition.x - b.gameObject.transform.localPosition.x);
@@ -167,23 +178,19 @@ public static class Pathfinder
 
     private static  List<GridCell> CalculatePath(GridCell endCell)
     {
-        List<GridCell> path = new List<GridCell>();
-        path.Add(endCell);
+        List<GridCell> instancePath = new List<GridCell>();
+        instancePath.Add(endCell);
         GridCell currentCell = endCell;
         while (currentCell.previousCell != null)
         {
-            path.Add(currentCell.previousCell);
+            instancePath.Add(currentCell.previousCell);
             currentCell = currentCell.previousCell;
         }
-        path.Reverse();
+        instancePath.Reverse();
 
-        if (path != null){
-            foreach (GridCell cell in path)
-            {
-                cell.SetColor(Color.blue);
-            }
-        }
+        path = instancePath;
+        DrawPath();
         
-        return path;
+        return instancePath;
     }
 }
