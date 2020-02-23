@@ -28,28 +28,27 @@ public class GridCell : MonoBehaviour
     {
         if (this.buildable)
         {
-            rend.material.color = Color.green;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.up,out hit, 10))
+            /*
+            if( Input.GetMouseButton(0))
             {
-                Debug.Log("Hit");
-                if (hit.transform.gameObject.tag == "GridTempFloor"){
-                    hit.transform.gameObject.GetComponent<GridCell>().passable = false;
+                if(passable)
+                {
+                    BuildWall();
                 }
+                else
+                {
+                    RemoveWall();
+                }
+                rend.material.color = color;
+                publisher.Notify(PublisherEvent.BuiltWall);
             }
-            publisher.Notify(PublisherEvent.MouseOverBuildableCell);
+            */
+            rend.material.color = Color.green;
         }
     }
 
     void OnMouseExit()
     {
-        RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.up,out hit, 1))
-            {
-                if (hit.transform.gameObject.tag == "GridTempFloor"){
-                    hit.transform.gameObject.GetComponent<GridCell>().passable = true;
-                }
-            }
         rend.material.color = color;
     }
 
@@ -57,20 +56,33 @@ public class GridCell : MonoBehaviour
     {
         if (this.buildable)
         {
-            this.passable = !this.passable;
-            this.color = this.passable ? Color.white : Color.grey;
-            this.transform.localScale = this.passable ? this.transform.localScale  -= new Vector3(0, 0.5f , 0) : this.transform.localScale  += new Vector3(0, 0.5f , 0);
-            this.transform.localPosition = this.passable ? this.transform.localPosition  -= new Vector3(0, 0.25f , 0) : this.transform.localPosition  += new Vector3(0, 0.25f , 0);
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.up,out hit, 1))
+            if (passable)
             {
-                if (hit.transform.gameObject.tag == "GridTempFloor"){
-                    hit.transform.gameObject.GetComponent<GridCell>().passable = false;
-                }
+                BuildWall();
+            }
+            else
+            {
+                RemoveWall();
             }
             rend.material.color = color;
             publisher.Notify(PublisherEvent.BuiltWall);
         }
+    }
+
+    void BuildWall()
+    {
+        passable = false;
+        color = Color.grey;
+        this.transform.localScale  += new Vector3(0, 0.5f , 0);
+        this.transform.localPosition  += new Vector3(0, 0.25f , 0);
+    }
+
+    void RemoveWall()
+    {
+        passable = true;
+        color = Color.white;
+        this.transform.localScale  -= new Vector3(0, 0.5f , 0);
+        this.transform.localPosition  -= new Vector3(0, 0.25f , 0);
     }
 
     public void CalculateFCost()
