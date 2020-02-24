@@ -17,3 +17,11 @@ You have control over where the colonists go and what they do, but be warned... 
 ## Can I play it yet?
 
 Nope, but stay tuned, this ReadMe will be updated when it's playable.
+
+## What's the roadmap look like?
+
+Well, the closest thing I have to a roadmap right now is the [Trello Board](https://trello.com/b/TR7Oqx4u/project-raidworld) for the project. The is the first time I've used a board like this for a personal project, but I think it's a good thing to use to keep my thoughts and plans organized.
+
+## What if I need to contact you?
+
+You can visit [my website](http://jeffsweb.site/) for ways to contact me, or [email me directly](mailto:jeff.kapochus@gmail.com).
