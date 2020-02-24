@@ -7,8 +7,10 @@ public class GridCell : MonoBehaviour
     public bool passable;
     public bool buildable;
     public int x, z, gCost, hCost, fCost;
+    public Grid grid;
     public GridCell previousCell;
 
+    private List<GridCell> neighbors;
     private Renderer rend;
     private Color color;
     private Publisher publisher;
@@ -22,6 +24,7 @@ public class GridCell : MonoBehaviour
         buildable = true;
         this.x = (int)this.gameObject.transform.localPosition.x;
         this.z = (int)this.gameObject.transform.localPosition.z;
+        neighbors = grid.GetNeighborsForCell(x, z);
     }
 
     void OnMouseEnter()
@@ -108,6 +111,11 @@ public class GridCell : MonoBehaviour
     public void AddObserver(Observer observer)
     {
         publisher.AddObserver(observer);
+    }
+
+    public List<GridCell> GetNeighbors()
+    {
+        return neighbors;
     }
 
 }

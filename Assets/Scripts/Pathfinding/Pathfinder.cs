@@ -5,8 +5,8 @@ using UnityEngine;
 public static class Pathfinder
 {
     public static List<GridCell> path;
-    private static Grid gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
-    private static  List<GridCell> gridCells = gridCreator.gridCells;
+    private static Grid grid = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
+    private static  List<GridCell> gridCells = grid.gridCells;
     private static  List<GridCell> openCells;
     private static  List<GridCell> closedCells;
 
@@ -15,8 +15,8 @@ public static class Pathfinder
 
     public static List<Vector3> FindPath(Vector3 startWorldPosition, Vector3 endWorldPosition)
     {
-        GridCell startCell = gridCreator.GetGridCell((int)Mathf.Floor(startWorldPosition.x), (int)Mathf.Floor(startWorldPosition.z));
-        GridCell endCell = gridCreator.GetGridCell((int)Mathf.Floor(endWorldPosition.x), (int)Mathf.Floor(endWorldPosition.z));
+        GridCell startCell = grid.GetGridCell((int)Mathf.Floor(startWorldPosition.x), (int)Mathf.Floor(startWorldPosition.z));
+        GridCell endCell = grid.GetGridCell((int)Mathf.Floor(endWorldPosition.x), (int)Mathf.Floor(endWorldPosition.z));
 
         List<GridCell> path = FindPath(startCell.x, startCell.z, endCell.x, endCell.z);
         if (path == null)
@@ -36,17 +36,17 @@ public static class Pathfinder
 
     public static List<GridCell> FindPath(int startX, int startZ, int endX, int endZ)
     {
-        GridCell startCell = GetCell(startX, startZ);
-        GridCell endCell = GetCell(endX, endZ);
+        GridCell startCell = grid.GetGridCell(startX, startZ);
+        GridCell endCell = grid.GetGridCell(endX, endZ);
 
         openCells = new List<GridCell>() { startCell };
         closedCells = new List<GridCell>();
 
-        for (int x = 0; x <= gridCreator.GetGridSize().x; x++)
+        for (int x = 0; x <= grid.GetGridSize().x; x++)
         {
-            for (int z = 0; z <= gridCreator.GetGridSize().z; z++)
+            for (int z = 0; z <= grid.GetGridSize().z; z++)
             {
-                GridCell cell = GetCell(x, z);
+                GridCell cell = grid.GetGridCell(x, z);
                 cell.gCost = int.MaxValue;
                 cell.CalculateFCost();
                 cell.previousCell = null;
@@ -68,7 +68,7 @@ public static class Pathfinder
             openCells.Remove(currentCell);
             closedCells.Add(currentCell);
 
-            foreach (GridCell neighbor in GetNeighborList(currentCell))
+            foreach (GridCell neighbor in currentCell.GetNeighbors())
             {
                 if (closedCells.Contains(neighbor))
                 {
@@ -138,34 +138,6 @@ public static class Pathfinder
             }
         }
         return lowestFCostCell;
-    }
-
-    private static  List<GridCell> GetNeighborList(GridCell currentCell)
-    {
-        List<GridCell> neighborList = new List<GridCell>();
-        if (currentCell.x - 1 >= 0)
-        {
-            neighborList.Add(GetCell(currentCell.x - 1, currentCell.z));
-        }
-        if (currentCell.x + 1 <= gridCreator.GetGridSize().x)
-        {
-            neighborList.Add(GetCell(currentCell.x + 1, currentCell.z));
-        }
-        if (currentCell.z - 1 >= 0)
-        {
-            neighborList.Add(GetCell(currentCell.x, currentCell.z - 1));
-        }
-        if (currentCell.z + 1 <= gridCreator.GetGridSize().z)
-        {
-            neighborList.Add(GetCell(currentCell.x, currentCell.z + 1));
-        }
-
-        return neighborList;
-    }
-
-    private static  GridCell GetCell(int x, int z)
-    {
-        return gridCreator.GetGridCell(x, z);
     }
 
     private static  List<GridCell> CalculatePath(GridCell endCell)
