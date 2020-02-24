@@ -8,7 +8,7 @@ public class UIText : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textMesh;
     [SerializeField]
-    private BaseScript baseInfo;
+    private Base baseInfo;
 
     void Start()
     {

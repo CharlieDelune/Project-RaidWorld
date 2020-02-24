@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerScript : MonoBehaviour, Observer
+public class Spawner : MonoBehaviour, Observer
 {
     public float spawnTime;
     public List<GameObject> spawnWave;
@@ -11,7 +11,7 @@ public class SpawnerScript : MonoBehaviour, Observer
     private GameObject unitParent;
     private List<GridCell> path;
     [SerializeField]
-    private BaseScript baseScript;
+    private Base baseScript;
     private Grid gridCreator;
 
     private bool setUpObservers;

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyUnitScript : MonoBehaviour, Observer
+public class EnemyUnit : MonoBehaviour, Observer
 {
     public float speed;
     public float attackSpeed;
     public int damage;
     [SerializeField]
-    private BaseScript target;
+    private Base target;
     private GameObject gridHolder;
     private GridCell currentCell;
     private List<Vector3> pathVectorList;
@@ -22,7 +22,7 @@ public class EnemyUnitScript : MonoBehaviour, Observer
 
     void Start()
     {
-        target = GameObject.FindGameObjectsWithTag("Base")[0].GetComponent<BaseScript>();
+        target = GameObject.FindGameObjectsWithTag("Base")[0].GetComponent<Base>();
         gridHolder = GameObject.FindGameObjectsWithTag("GridHolder")[0];
         SetTargetPosition(target.transform.position);
 

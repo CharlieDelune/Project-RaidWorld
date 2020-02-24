@@ -39,4 +39,28 @@ public class Grid : MonoBehaviour
             }
         }
     }
+
+    public List<GridCell> GetNeighborsForCell(int x, int z)
+    {
+        List<GridCell> neighbors = new List<GridCell>();
+
+        if (x - 1 >= 0)
+        {
+            neighbors.Add(GetGridCell(x - 1, z));
+        }
+        if (x + 1 <= xSize - 1)
+        {
+            neighbors.Add(GetGridCell(x + 1, z));
+        }
+        if (z - 1 >= 0)
+        {
+            neighbors.Add(GetGridCell(x, z - 1));
+        }
+        if (z + 1 <= zSize - 1)
+        {
+            neighbors.Add(GetGridCell(x, z + 1));
+        }
+
+        return neighbors;
+    }
 }
