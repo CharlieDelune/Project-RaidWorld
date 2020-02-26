@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridCell : MonoBehaviour
+public class GridCell : MonoBehaviour, INodable
 {
     public bool passable;
     public bool buildable;
     public int x, z, gCost, hCost, fCost;
     public Grid grid;
     public GridCell previousCell;
+    public int nodeValue {get; set;}
+    public int id { get; set; }
 
     private List<GridCell> neighbors;
     private Renderer rend;
@@ -25,6 +27,8 @@ public class GridCell : MonoBehaviour
         this.x = (int)this.gameObject.transform.localPosition.x;
         this.z = (int)this.gameObject.transform.localPosition.z;
         neighbors = grid.GetNeighborsForCell(x, z);
+        nodeValue = 0;
+        id = GetInstanceID();
     }
 
     void OnMouseEnter()
@@ -91,6 +95,7 @@ public class GridCell : MonoBehaviour
     public void CalculateFCost()
     {
         fCost = gCost + hCost;
+        nodeValue = fCost;
     }
 
     public void SetColor(Color inputColor)
