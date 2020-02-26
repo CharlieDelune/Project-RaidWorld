@@ -18,6 +18,16 @@ public class EnemyUnit : MonoBehaviour, Observer
     [SerializeField]
     private bool attacking;
     private float timeToAttack;
+    [SerializeField]
+    private int health;
+    [SerializeField]
+    private int armor;
+    [SerializeField]
+    private int shield;
+    [SerializeField]
+    private int worth;
+    [SerializeField]
+    private bool flying;
 
 
     void Start()
@@ -25,6 +35,7 @@ public class EnemyUnit : MonoBehaviour, Observer
         target = GameObject.FindGameObjectsWithTag("Base")[0].GetComponent<Base>();
         gridHolder = GameObject.FindGameObjectsWithTag("GridHolder")[0];
         SetTargetPosition(target.transform.position);
+        timeToAttack = 0;
 
         foreach(GridCell cell in gridHolder.GetComponent<Grid>().gridCells)
         {
@@ -49,7 +60,9 @@ public class EnemyUnit : MonoBehaviour, Observer
         switch(ev)
         {
             case PublisherEvent.BuiltWall:
-                SetTargetPosition(target.transform.position);
+                if(!attacking){
+                    SetTargetPosition(target.transform.position);
+                }
                 break;
             default:
                 break;
@@ -116,6 +129,15 @@ public class EnemyUnit : MonoBehaviour, Observer
         {
             moving = true;
             pathVectorList.RemoveAt(0);
+        }
+    }
+
+    public void TakeDamage(int dam)
+    {
+        this.health -= (dam - armor);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
