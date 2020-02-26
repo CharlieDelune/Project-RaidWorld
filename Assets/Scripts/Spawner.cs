@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour, Observer
     private Grid gridCreator;
 
     private bool setUpObservers;
+    private bool searchingForGrid;
     
     void Start()
     {
@@ -22,6 +23,7 @@ public class Spawner : MonoBehaviour, Observer
         path = null;
 
         setUpObservers = false;
+        searchingForGrid = true;
 
         gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
     }
@@ -29,6 +31,26 @@ public class Spawner : MonoBehaviour, Observer
     
     void Update()
     {
+        if (searchingForGrid)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
+            {
+                if (hit.transform.gameObject.tag == "GridFloor"){
+                    GridCell cell = hit.transform.gameObject.GetComponent<GridCell>();
+                    cell.buildable = false;
+                    foreach(GridCell neighbor in cell.GetNeighbors())
+                    {
+                        neighbor.buildable = false;
+                    }
+                    searchingForGrid = false;
+                }
+            }
+            else{
+                Debug.Log("Spawner is off the grid!");
+                Destroy(gameObject);
+            }
+        }
         if (!setUpObservers)
         {
             SetUpObservers();
