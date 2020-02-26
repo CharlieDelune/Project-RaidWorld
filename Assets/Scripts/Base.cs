@@ -21,7 +21,12 @@ public class Base : MonoBehaviour
             if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
             {
                 if (hit.transform.gameObject.tag == "GridFloor"){
-                    hit.transform.gameObject.GetComponent<GridCell>().buildable = false;
+                    GridCell cell = hit.transform.gameObject.GetComponent<GridCell>();
+                    cell.buildable = false;
+                    foreach(GridCell neighbor in cell.GetNeighbors())
+                    {
+                        neighbor.buildable = false;
+                    }
                     searchingForGrid = false;
                 }
             }
