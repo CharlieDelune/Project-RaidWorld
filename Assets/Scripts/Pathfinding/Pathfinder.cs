@@ -7,7 +7,7 @@ public static class Pathfinder
     public static List<GridCell> path;
     private static Grid grid = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
     private static  List<GridCell> gridCells = grid.gridCells;
-    private static  List<GridCell> openCells;
+    private static  BinaryTree<GridCell> openCells;
     private static  List<GridCell> closedCells;
 
     private const int MOVE_STRAIGHT_COST = 10;
@@ -39,7 +39,7 @@ public static class Pathfinder
         GridCell startCell = grid.GetGridCell(startX, startZ);
         GridCell endCell = grid.GetGridCell(endX, endZ);
 
-        openCells = new List<GridCell>() { startCell };
+        openCells = new BinaryTree<GridCell>();
         closedCells = new List<GridCell>();
 
         for (int x = 0; x <= grid.GetGridSize().x; x++)
@@ -57,7 +57,9 @@ public static class Pathfinder
         startCell.hCost = CalculateDistance(startCell, endCell);
         startCell.CalculateFCost();
 
-        while(openCells.Count > 0)
+        openCells.Add(startCell);
+
+        while(openCells.Count() > 0)
         {
             GridCell currentCell = GetLowestFCostCell(openCells);
             if(currentCell == endCell)
@@ -68,7 +70,9 @@ public static class Pathfinder
             openCells.Remove(currentCell);
             closedCells.Add(currentCell);
 
-            foreach (GridCell neighbor in currentCell.GetNeighbors())
+            List<GridCell> currentCellNeighbors = currentCell.GetNeighbors();
+
+            foreach (GridCell neighbor in currentCellNeighbors)
             {
                 if (closedCells.Contains(neighbor))
                 {
@@ -127,17 +131,9 @@ public static class Pathfinder
         return (int)(MOVE_DIAGONAL_COST * Mathf.Min(xDistance, zDistance) + MOVE_STRAIGHT_COST * remaining);
     }
 
-    private static  GridCell GetLowestFCostCell(List<GridCell> gridCellList)
+    private static GridCell GetLowestFCostCell(BinaryTree<GridCell> gridCellList)
     {
-        GridCell lowestFCostCell = gridCellList[0];
-        for (int i = 1; i < gridCellList.Count; i++)
-        {
-            if (gridCellList[i].fCost < lowestFCostCell.fCost)
-            {
-                lowestFCostCell = gridCellList[i];
-            }
-        }
-        return lowestFCostCell;
+        return gridCellList.FindLowestNode();
     }
 
     private static  List<GridCell> CalculatePath(GridCell endCell)
