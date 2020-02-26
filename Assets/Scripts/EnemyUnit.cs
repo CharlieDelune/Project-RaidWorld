@@ -111,7 +111,6 @@ public class EnemyUnit : MonoBehaviour, Observer
 
     private void StartAttacking()
     {
-        timeToAttack = attackSpeed;
         attacking = true;
     }
 
