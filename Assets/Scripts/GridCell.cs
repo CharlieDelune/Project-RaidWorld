@@ -11,11 +11,14 @@ public class GridCell : MonoBehaviour, INodable
     public GridCell previousCell;
     public int nodeValue {get; set;}
     public int id { get; set; }
+    public GameObject turretPrefab;
 
     private List<GridCell> neighbors;
     private Renderer rend;
     private Color color;
     private Publisher publisher;
+    private bool wall;
+    private bool turret;
 
     void Start()
     {
@@ -29,6 +32,8 @@ public class GridCell : MonoBehaviour, INodable
         neighbors = grid.GetNeighborsForCell(x, z);
         nodeValue = 0;
         id = GetInstanceID();
+        wall = false;
+        turret = false;
     }
 
     void OnMouseEnter()
@@ -76,8 +81,27 @@ public class GridCell : MonoBehaviour, INodable
         }
     }
 
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (wall && !turret)
+            {
+                BuildTurret();
+            }
+        }
+    }
+
+    void BuildTurret()
+    {
+        turret = true;
+        GameObject newTurret = Instantiate(turretPrefab);
+        newTurret.transform.SetParent(this.transform, false);
+    }
+
     void BuildWall()
     {
+        wall = true;
         passable = false;
         color = Color.grey;
         this.transform.localScale  += new Vector3(0, 0.5f , 0);
@@ -87,6 +111,7 @@ public class GridCell : MonoBehaviour, INodable
     void RemoveWall()
     {
         passable = true;
+        wall = false;
         color = Color.white;
         this.transform.localScale  -= new Vector3(0, 0.5f , 0);
         this.transform.localPosition  -= new Vector3(0, 0.25f , 0);

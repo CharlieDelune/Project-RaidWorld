@@ -140,7 +140,7 @@ public class EnemyUnit : MonoBehaviour, Observer
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Base")
         {
