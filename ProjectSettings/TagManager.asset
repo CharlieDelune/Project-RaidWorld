@@ -5,12 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Base
-  - GridHolder
   - EnemyUnit
   - FriendlyUnit
-  - GridFloor
-  - GridTempFloor
-  - GridTempHolder
+  - MainGrid
+  - MainGridFloor
+  - Globals
+  - Walls
+  - Weapons
   layers:
   - Default
   - TransparentFX

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Publisher
+public static class Publisher
 {
-    List<Observer> observers = new List<Observer>();
+    private static List<Observer> observers = new List<Observer>();
 
-    public void Notify(PublisherEvent ev)
+    public static void Notify(PublisherEvent ev)
     {
         foreach (Observer observer in observers)
         {
@@ -14,12 +14,12 @@ public class Publisher
         }
     }
 
-    public void AddObserver(Observer observer)
+    public static void AddObserver(Observer observer)
     {
         observers.Add(observer);
     }
 
-    public void RemoveObserver(Observer observer)
+    public static void RemoveObserver(Observer observer)
     {
         observers.Remove(observer);
     }
@@ -28,5 +28,8 @@ public class Publisher
 public enum PublisherEvent
 {
     BuiltWall,
+    BuiltTurret,
+    RemovedWall,
+    RemovedTurret,
     MouseOverBuildableCell
 }
