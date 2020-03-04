@@ -12,18 +12,18 @@ public class GridCell : MonoBehaviour, INodable
     public int nodeValue {get; set;}
     public int id { get; set; }
     public GameObject turretPrefab;
+    public bool wall;
+    public bool turret;
 
     private List<GridCell> neighbors;
     private Renderer rend;
     private Color color;
-    private Publisher publisher;
-    private bool wall;
-    private bool turret;
     private GameObject currentTurret;
+    private Globals globals;
 
     void Start()
     {
-        publisher = new Publisher();
+        globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
         rend =GetComponent<Renderer>();
         color = Color.white;
         passable = true;
@@ -41,21 +41,6 @@ public class GridCell : MonoBehaviour, INodable
     {
         if (this.buildable)
         {
-            /*
-            if( Input.GetMouseButton(0))
-            {
-                if(passable)
-                {
-                    BuildWall();
-                }
-                else
-                {
-                    RemoveWall();
-                }
-                rend.material.color = color;
-                publisher.Notify(PublisherEvent.BuiltWall);
-            }
-            */
             rend.material.color = Color.green;
         }
     }
@@ -71,14 +56,12 @@ public class GridCell : MonoBehaviour, INodable
         {
             if (passable)
             {
-                BuildWall();
+                globals.BuildWall(this);
             }
             else if (!passable && !turret)
             {
-                RemoveWall();
+                globals.DestroyWall(this);
             }
-            rend.material.color = color;
-            publisher.Notify(PublisherEvent.BuiltWall);
         }
     }
 
@@ -88,46 +71,13 @@ public class GridCell : MonoBehaviour, INodable
         {
             if (wall && !turret)
             {
-                BuildTurret();
+                globals.BuildTurret(this);
             }
             else if (wall && turret)
             {
-                DestroyTurret();
+                globals.DestroyTurret(this);
             }
         }
-    }
-
-    void BuildTurret()
-    {
-        turret = true;
-        GameObject newTurret = Instantiate(turretPrefab);
-        newTurret.transform.SetParent(this.transform, false);
-        currentTurret = newTurret;
-    }
-
-    void DestroyTurret()
-    {
-        turret = false;
-        Destroy(currentTurret);
-        currentTurret = null;
-    }
-
-    void BuildWall()
-    {
-        wall = true;
-        passable = false;
-        color = Color.grey;
-        this.transform.localScale  += new Vector3(0, 0.5f , 0);
-        this.transform.localPosition  += new Vector3(0, 0.25f , 0);
-    }
-
-    void RemoveWall()
-    {
-        passable = true;
-        wall = false;
-        color = Color.white;
-        this.transform.localScale  -= new Vector3(0, 0.5f , 0);
-        this.transform.localPosition  -= new Vector3(0, 0.25f , 0);
     }
 
     public void CalculateFCost()
@@ -149,11 +99,6 @@ public class GridCell : MonoBehaviour, INodable
     {
         this.SetColor(Color.white);
         this.passable = true;
-    }
-
-    public void AddObserver(Observer observer)
-    {
-        publisher.AddObserver(observer);
     }
 
     public List<GridCell> GetNeighbors()

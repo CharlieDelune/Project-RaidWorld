@@ -116,6 +116,11 @@ public static class Pathfinder
         }
     }
 
+    public static void ResetPath(Grid grid)
+    {
+        grid.ResetGridColors();
+    }
+
     private static  int CalculateDistance(GridCell a, GridCell b)
     {
         int moveCost = 10;
