@@ -4,21 +4,14 @@ using UnityEngine;
 
 public static class Pathfinder
 {
-    public static List<GridCell> path;
-    private static Grid grid = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
-    private static  List<GridCell> gridCells = grid.gridCells;
-    private static  BinaryTree<GridCell> openCells;
-    private static  List<GridCell> closedCells;
+    public static int test;
 
-    private const int MOVE_STRAIGHT_COST = 10;
-    private const int MOVE_DIAGONAL_COST = 14;
-
-    public static List<Vector3> FindPath(Vector3 startWorldPosition, Vector3 endWorldPosition)
+    public static List<Vector3> FindPath(Grid grid, Vector3 startWorldPosition, Vector3 endWorldPosition)
     {
         GridCell startCell = grid.GetGridCell((int)Mathf.Floor(startWorldPosition.x), (int)Mathf.Floor(startWorldPosition.z));
         GridCell endCell = grid.GetGridCell((int)Mathf.Floor(endWorldPosition.x), (int)Mathf.Floor(endWorldPosition.z));
 
-        List<GridCell> path = FindPath(startCell.x, startCell.z, endCell.x, endCell.z);
+        List<GridCell> path = FindPath(grid, startCell.x, startCell.z, endCell.x, endCell.z);
         if (path == null)
         {
             return null;
@@ -34,13 +27,13 @@ public static class Pathfinder
         }
     }
 
-    public static List<GridCell> FindPath(int startX, int startZ, int endX, int endZ)
+    public static List<GridCell> FindPath(Grid grid, int startX, int startZ, int endX, int endZ)
     {
         GridCell startCell = grid.GetGridCell(startX, startZ);
         GridCell endCell = grid.GetGridCell(endX, endZ);
 
-        openCells = new BinaryTree<GridCell>();
-        closedCells = new List<GridCell>();
+        BinaryTree<GridCell> openCells = new BinaryTree<GridCell>();
+        List<GridCell> closedCells = new List<GridCell>();
 
         for (int x = 0; x <= grid.GetGridSize().x; x++)
         {
@@ -103,7 +96,7 @@ public static class Pathfinder
         return null;
     }
 
-    public static void DrawPath()
+    public static void DrawPath(List<GridCell> path)
     {
         if (path != null){
             foreach (GridCell cell in path)
@@ -125,10 +118,11 @@ public static class Pathfinder
 
     private static  int CalculateDistance(GridCell a, GridCell b)
     {
+        int moveCost = 10;
         float xDistance = Mathf.Abs(a.gameObject.transform.localPosition.x - b.gameObject.transform.localPosition.x);
         float zDistance = Mathf.Abs(a.gameObject.transform.localPosition.z - b.gameObject.transform.localPosition.z);
         float remaining = Mathf.Abs(xDistance - zDistance);
-        return (int)(MOVE_DIAGONAL_COST * Mathf.Min(xDistance, zDistance) + MOVE_STRAIGHT_COST * remaining);
+        return (int)(moveCost * Mathf.Min(xDistance, zDistance) + moveCost * remaining);
     }
 
     private static GridCell GetLowestFCostCell(BinaryTree<GridCell> gridCellList)
@@ -147,8 +141,6 @@ public static class Pathfinder
             currentCell = currentCell.previousCell;
         }
         instancePath.Reverse();
-
-        path = instancePath;
         
         return instancePath;
     }
