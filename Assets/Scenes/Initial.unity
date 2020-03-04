@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 10571645}
   m_Layer: 0
   m_Name: GridFloor(Clone) (85)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &10571646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,7 +258,7 @@ GameObject:
   - component: {fileID: 13164569}
   m_Layer: 0
   m_Name: GridFloor(Clone) (84)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,6 +299,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &13164570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -374,7 +378,7 @@ GameObject:
   - component: {fileID: 15868830}
   m_Layer: 0
   m_Name: GridFloor(Clone) (35)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,6 +419,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &15868831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -492,7 +498,7 @@ GameObject:
   - component: {fileID: 45472862}
   m_Layer: 0
   m_Name: GridFloor(Clone) (22)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,6 +539,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &45472863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -762,7 +770,7 @@ GameObject:
   - component: {fileID: 87282968}
   m_Layer: 0
   m_Name: GridFloor(Clone) (86)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -803,6 +811,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &87282969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -880,7 +890,7 @@ GameObject:
   - component: {fileID: 89913814}
   m_Layer: 0
   m_Name: GridFloor(Clone) (30)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,6 +931,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &89913815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -998,7 +1010,7 @@ GameObject:
   - component: {fileID: 105746044}
   m_Layer: 0
   m_Name: GridFloor(Clone) (19)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,6 +1051,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &105746045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1116,7 +1130,7 @@ GameObject:
   - component: {fileID: 106791323}
   m_Layer: 0
   m_Name: GridFloor(Clone) (75)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1157,6 +1171,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &106791324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1309,7 +1325,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &118205168
 GameObject:
@@ -1326,7 +1342,7 @@ GameObject:
   - component: {fileID: 118205170}
   m_Layer: 0
   m_Name: GridFloor(Clone) (78)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1367,6 +1383,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &118205171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,7 +1462,7 @@ GameObject:
   - component: {fileID: 124752292}
   m_Layer: 0
   m_Name: GridFloor(Clone) (10)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1485,6 +1503,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &124752293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1562,7 +1582,7 @@ GameObject:
   - component: {fileID: 129097850}
   m_Layer: 0
   m_Name: GridFloor(Clone) (5)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1603,6 +1623,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &129097851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1680,7 +1702,7 @@ GameObject:
   - component: {fileID: 159955065}
   m_Layer: 0
   m_Name: GridFloor(Clone) (87)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1721,6 +1743,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &159955066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1798,7 +1822,7 @@ GameObject:
   - component: {fileID: 192081681}
   m_Layer: 0
   m_Name: GridFloor(Clone) (7)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1839,6 +1863,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &192081682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1916,7 +1942,7 @@ GameObject:
   - component: {fileID: 209405452}
   m_Layer: 0
   m_Name: GridFloor(Clone) (31)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1957,6 +1983,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &209405453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2034,7 +2062,7 @@ GameObject:
   - component: {fileID: 212418848}
   m_Layer: 0
   m_Name: GridFloor(Clone) (91)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2075,6 +2103,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &212418849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2152,7 +2182,7 @@ GameObject:
   - component: {fileID: 238824800}
   m_Layer: 0
   m_Name: GridFloor(Clone) (51)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,6 +2223,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &238824801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2270,7 +2302,7 @@ GameObject:
   - component: {fileID: 259396008}
   m_Layer: 0
   m_Name: GridFloor(Clone) (37)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2311,6 +2343,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &259396009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2388,7 +2422,7 @@ GameObject:
   - component: {fileID: 276374568}
   m_Layer: 0
   m_Name: GridFloor(Clone) (21)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2429,6 +2463,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &276374569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2506,7 +2542,7 @@ GameObject:
   - component: {fileID: 295080348}
   m_Layer: 0
   m_Name: GridFloor(Clone) (54)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2547,6 +2583,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &295080349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2620,8 +2658,8 @@ GameObject:
   - component: {fileID: 318706265}
   - component: {fileID: 318706264}
   m_Layer: 0
-  m_Name: GridHolder
-  m_TagString: GridHolder
+  m_Name: MainGrid
+  m_TagString: MainGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2855,7 +2893,7 @@ Transform:
   - {fileID: 629048906}
   - {fileID: 1741123800}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334499639
 GameObject:
@@ -2872,7 +2910,7 @@ GameObject:
   - component: {fileID: 334499641}
   m_Layer: 0
   m_Name: GridFloor(Clone) (65)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2913,6 +2951,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &334499642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2990,7 +3030,7 @@ GameObject:
   - component: {fileID: 351236852}
   m_Layer: 0
   m_Name: GridFloor(Clone) (96)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3031,6 +3071,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &351236853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3108,7 +3150,7 @@ GameObject:
   - component: {fileID: 362201206}
   m_Layer: 0
   m_Name: GridFloor(Clone) (4)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3149,6 +3191,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &362201207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3226,7 +3270,7 @@ GameObject:
   - component: {fileID: 374897539}
   m_Layer: 0
   m_Name: GridFloor(Clone) (68)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3267,6 +3311,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &374897540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3344,7 +3390,7 @@ GameObject:
   - component: {fileID: 412477371}
   m_Layer: 0
   m_Name: GridFloor(Clone) (2)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3385,6 +3431,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &412477372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3462,7 +3510,7 @@ GameObject:
   - component: {fileID: 418998966}
   m_Layer: 0
   m_Name: GridFloor(Clone) (57)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3503,6 +3551,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &418998967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3580,7 +3630,7 @@ GameObject:
   - component: {fileID: 420630465}
   m_Layer: 0
   m_Name: GridFloor(Clone) (94)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3621,6 +3671,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &420630466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3698,7 +3750,7 @@ GameObject:
   - component: {fileID: 427673135}
   m_Layer: 0
   m_Name: GridFloor(Clone) (55)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3739,6 +3791,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &427673136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3968,7 +4022,7 @@ GameObject:
   - component: {fileID: 466595017}
   m_Layer: 0
   m_Name: GridFloor(Clone) (56)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4009,6 +4063,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &466595018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4086,7 +4142,7 @@ GameObject:
   - component: {fileID: 469469641}
   m_Layer: 0
   m_Name: GridFloor(Clone) (73)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4127,6 +4183,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &469469642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4204,7 +4262,7 @@ GameObject:
   - component: {fileID: 494719782}
   m_Layer: 0
   m_Name: GridFloor(Clone) (16)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4245,6 +4303,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &494719783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4307,6 +4367,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494719780}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &511733362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511733363}
+  m_Layer: 0
+  m_Name: Walls
+  m_TagString: Walls
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511733363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511733362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36465323, y: 1.3274845, z: -1.01693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554978521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,7 +4412,7 @@ GameObject:
   - component: {fileID: 554978523}
   m_Layer: 0
   m_Name: GridFloor(Clone) (90)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4363,6 +4453,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &554978524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4440,7 +4532,7 @@ GameObject:
   - component: {fileID: 570957050}
   m_Layer: 0
   m_Name: GridFloor(Clone) (17)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4481,6 +4573,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &570957051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4558,7 +4652,7 @@ GameObject:
   - component: {fileID: 614602749}
   m_Layer: 0
   m_Name: GridFloor(Clone) (44)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4599,6 +4693,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &614602750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4676,7 +4772,7 @@ GameObject:
   - component: {fileID: 618879898}
   m_Layer: 0
   m_Name: GridFloor(Clone) (95)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4717,6 +4813,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &618879899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4921,7 +5019,7 @@ GameObject:
   - component: {fileID: 629048907}
   m_Layer: 0
   m_Name: GridFloor(Clone) (98)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4962,6 +5060,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &629048908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5039,7 +5139,7 @@ GameObject:
   - component: {fileID: 643292003}
   m_Layer: 0
   m_Name: GridFloor(Clone) (41)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5080,6 +5180,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &643292004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5157,7 +5259,7 @@ GameObject:
   - component: {fileID: 645215710}
   m_Layer: 0
   m_Name: GridFloor(Clone) (52)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5198,6 +5300,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &645215711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5275,7 +5379,7 @@ GameObject:
   - component: {fileID: 693700257}
   m_Layer: 0
   m_Name: GridFloor(Clone) (70)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5316,6 +5420,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &693700258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5393,7 +5499,7 @@ GameObject:
   - component: {fileID: 699955332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (29)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5434,6 +5540,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &699955333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5511,7 +5619,7 @@ GameObject:
   - component: {fileID: 740916332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (58)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5552,6 +5660,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &740916333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5614,6 +5724,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740916330}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &777712216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777712218}
+  - component: {fileID: 777712217}
+  m_Layer: 0
+  m_Name: Globals
+  m_TagString: Globals
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &777712217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777712216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddeb0c03cc4ded478aab5ce50a80fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainGrid: {fileID: 0}
+  tempGrid: {fileID: 0}
+  flightGrid: {fileID: 0}
+  tempFlightGrid: {fileID: 0}
+  mainBase: {fileID: 0}
+  wallPrefab: {fileID: 1848214297546191953, guid: 56bc8e600e2e11341bb5f9174a8713d2, type: 3}
+  turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+--- !u!4 &777712218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777712216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1889906, y: 4.850187, z: 0.6187113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800352101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,7 +5789,7 @@ GameObject:
   - component: {fileID: 800352103}
   m_Layer: 0
   m_Name: GridFloor(Clone) (8)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5670,6 +5830,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &800352104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5862,7 +6024,7 @@ GameObject:
   - component: {fileID: 872356837}
   m_Layer: 0
   m_Name: GridFloor(Clone) (25)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5903,6 +6065,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &872356838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5980,7 +6144,7 @@ GameObject:
   - component: {fileID: 872511525}
   m_Layer: 0
   m_Name: GridFloor(Clone) (24)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6021,6 +6185,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &872511526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6134,7 +6300,7 @@ GameObject:
   - component: {fileID: 899572471}
   m_Layer: 0
   m_Name: GridFloor(Clone) (9)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6175,6 +6341,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &899572472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6252,7 +6420,7 @@ GameObject:
   - component: {fileID: 905016524}
   m_Layer: 0
   m_Name: GridFloor(Clone) (97)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6293,6 +6461,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &905016525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6370,7 +6540,7 @@ GameObject:
   - component: {fileID: 905710499}
   m_Layer: 0
   m_Name: GridFloor(Clone) (38)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6411,6 +6581,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &905710500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6537,7 +6709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952112956
 GameObject:
@@ -6554,7 +6726,7 @@ GameObject:
   - component: {fileID: 952112958}
   m_Layer: 0
   m_Name: GridFloor(Clone) (61)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6595,6 +6767,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &952112959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6672,7 +6846,7 @@ GameObject:
   - component: {fileID: 960005067}
   m_Layer: 0
   m_Name: GridFloor(Clone) (53)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6713,6 +6887,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &960005068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6790,7 +6966,7 @@ GameObject:
   - component: {fileID: 970438902}
   m_Layer: 0
   m_Name: GridFloor(Clone) (11)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6831,6 +7007,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &970438903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6908,7 +7086,7 @@ GameObject:
   - component: {fileID: 991323518}
   m_Layer: 0
   m_Name: GridFloor(Clone) (6)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6949,6 +7127,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &991323519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7026,7 +7206,7 @@ GameObject:
   - component: {fileID: 1017837972}
   m_Layer: 0
   m_Name: GridFloor(Clone) (60)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7067,6 +7247,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1017837973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7289,7 +7471,7 @@ GameObject:
   - component: {fileID: 1029659514}
   m_Layer: 0
   m_Name: GridFloor(Clone) (3)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7330,6 +7512,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1029659515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7407,7 +7591,7 @@ GameObject:
   - component: {fileID: 1063849025}
   m_Layer: 0
   m_Name: GridFloor(Clone) (92)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7448,6 +7632,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1063849026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7525,7 +7711,7 @@ GameObject:
   - component: {fileID: 1097943895}
   m_Layer: 0
   m_Name: GridFloor(Clone) (39)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7566,6 +7752,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1097943896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7643,7 +7831,7 @@ GameObject:
   - component: {fileID: 1154796939}
   m_Layer: 0
   m_Name: GridFloor(Clone) (1)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7684,6 +7872,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1154796940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7761,7 +7951,7 @@ GameObject:
   - component: {fileID: 1178611465}
   m_Layer: 0
   m_Name: GridFloor(Clone) (14)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7802,6 +7992,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1178611466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7879,7 +8071,7 @@ GameObject:
   - component: {fileID: 1190610669}
   m_Layer: 0
   m_Name: GridFloor(Clone) (12)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7920,6 +8112,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1190610670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7997,7 +8191,7 @@ GameObject:
   - component: {fileID: 1212764998}
   m_Layer: 0
   m_Name: GridFloor(Clone) (66)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8038,6 +8232,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1212764999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8115,7 +8311,7 @@ GameObject:
   - component: {fileID: 1238965015}
   m_Layer: 0
   m_Name: GridFloor(Clone) (64)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8156,6 +8352,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1238965016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8233,7 +8431,7 @@ GameObject:
   - component: {fileID: 1294789774}
   m_Layer: 0
   m_Name: GridFloor(Clone) (67)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8274,6 +8472,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1294789775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8351,7 +8551,7 @@ GameObject:
   - component: {fileID: 1298742124}
   m_Layer: 0
   m_Name: GridFloor(Clone) (13)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8392,6 +8592,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1298742125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8469,7 +8671,7 @@ GameObject:
   - component: {fileID: 1301744346}
   m_Layer: 0
   m_Name: GridFloor(Clone) (27)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8510,6 +8712,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1301744347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8587,7 +8791,7 @@ GameObject:
   - component: {fileID: 1306410119}
   m_Layer: 0
   m_Name: GridFloor(Clone) (36)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8628,6 +8832,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1306410120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8705,7 +8911,7 @@ GameObject:
   - component: {fileID: 1340017265}
   m_Layer: 0
   m_Name: GridFloor(Clone) (72)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8746,6 +8952,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1340017266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8823,7 +9031,7 @@ GameObject:
   - component: {fileID: 1348836992}
   m_Layer: 0
   m_Name: GridFloor(Clone)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8864,6 +9072,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1348836993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8941,7 +9151,7 @@ GameObject:
   - component: {fileID: 1367445180}
   m_Layer: 0
   m_Name: GridFloor(Clone) (50)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8982,6 +9192,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1367445181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9074,7 +9286,7 @@ Transform:
   - {fileID: 625149687}
   - {fileID: 1541914648}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390506204
 GameObject:
@@ -9157,7 +9369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &1392221812
 GameObject:
@@ -9174,7 +9386,7 @@ GameObject:
   - component: {fileID: 1392221814}
   m_Layer: 0
   m_Name: GridFloor(Clone) (20)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9215,6 +9427,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1392221815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9292,7 +9506,7 @@ GameObject:
   - component: {fileID: 1420348147}
   m_Layer: 0
   m_Name: GridFloor(Clone) (15)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9333,6 +9547,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1420348148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9424,7 +9640,7 @@ Transform:
   m_Children:
   - {fileID: 858415928}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493855804
 GameObject:
@@ -9441,7 +9657,7 @@ GameObject:
   - component: {fileID: 1493855806}
   m_Layer: 0
   m_Name: GridFloor(Clone) (80)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9482,6 +9698,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1493855807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9594,8 +9812,10 @@ MonoBehaviour:
   spawnWave:
   - {fileID: 5939147672862637753, guid: 02071c70fef255a44876d885bb08c8a6, type: 3}
   - {fileID: 5939147672862637753, guid: 02071c70fef255a44876d885bb08c8a6, type: 3}
+  settings: {fileID: 0}
   unitParent: {fileID: 1383433798}
   baseScript: {fileID: 625149688}
+  mainGrid: {fileID: 0}
 --- !u!136 &1541914651
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9674,7 +9894,7 @@ GameObject:
   - component: {fileID: 1547087215}
   m_Layer: 0
   m_Name: GridFloor(Clone) (48)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9715,6 +9935,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1547087216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9792,7 +10014,7 @@ GameObject:
   - component: {fileID: 1549104264}
   m_Layer: 0
   m_Name: GridFloor(Clone) (40)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9833,6 +10055,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1549104265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9910,7 +10134,7 @@ GameObject:
   - component: {fileID: 1620222050}
   m_Layer: 0
   m_Name: GridFloor(Clone) (76)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9951,6 +10175,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1620222051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10028,7 +10254,7 @@ GameObject:
   - component: {fileID: 1635650291}
   m_Layer: 0
   m_Name: GridFloor(Clone) (23)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10069,6 +10295,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1635650292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10146,7 +10374,7 @@ GameObject:
   - component: {fileID: 1645306658}
   m_Layer: 0
   m_Name: GridFloor(Clone) (81)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10187,6 +10415,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1645306659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10264,7 +10494,7 @@ GameObject:
   - component: {fileID: 1686002723}
   m_Layer: 0
   m_Name: GridFloor(Clone) (32)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10305,6 +10535,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1686002724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10382,7 +10614,7 @@ GameObject:
   - component: {fileID: 1699149341}
   m_Layer: 0
   m_Name: GridFloor(Clone) (77)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10423,6 +10655,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1699149342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10500,7 +10734,7 @@ GameObject:
   - component: {fileID: 1741123801}
   m_Layer: 0
   m_Name: GridFloor(Clone) (99)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10541,6 +10775,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1741123802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10618,7 +10854,7 @@ GameObject:
   - component: {fileID: 1763188693}
   m_Layer: 0
   m_Name: GridFloor(Clone) (45)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10659,6 +10895,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1763188694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10736,7 +10974,7 @@ GameObject:
   - component: {fileID: 1765001416}
   m_Layer: 0
   m_Name: GridFloor(Clone) (26)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10777,6 +11015,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1765001417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10854,7 +11094,7 @@ GameObject:
   - component: {fileID: 1775083920}
   m_Layer: 0
   m_Name: GridFloor(Clone) (33)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10895,6 +11135,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1775083921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10972,7 +11214,7 @@ GameObject:
   - component: {fileID: 1784310626}
   m_Layer: 0
   m_Name: GridFloor(Clone) (82)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11013,6 +11255,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1784310627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11090,7 +11334,7 @@ GameObject:
   - component: {fileID: 1802335163}
   m_Layer: 0
   m_Name: GridFloor(Clone) (59)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11131,6 +11375,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1802335164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11208,7 +11454,7 @@ GameObject:
   - component: {fileID: 1812701933}
   m_Layer: 0
   m_Name: GridFloor(Clone) (93)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11249,6 +11495,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1812701934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11326,7 +11574,7 @@ GameObject:
   - component: {fileID: 1866377634}
   m_Layer: 0
   m_Name: GridFloor(Clone) (74)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11367,6 +11615,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1866377635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11444,7 +11694,7 @@ GameObject:
   - component: {fileID: 1870919583}
   m_Layer: 0
   m_Name: GridFloor(Clone) (46)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11485,6 +11735,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1870919584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11562,7 +11814,7 @@ GameObject:
   - component: {fileID: 1895516853}
   m_Layer: 0
   m_Name: GridFloor(Clone) (34)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11603,6 +11855,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1895516854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11680,7 +11934,7 @@ GameObject:
   - component: {fileID: 1897994472}
   m_Layer: 0
   m_Name: GridFloor(Clone) (28)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11721,6 +11975,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1897994473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11798,7 +12054,7 @@ GameObject:
   - component: {fileID: 1910782861}
   m_Layer: 0
   m_Name: GridFloor(Clone) (18)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11839,6 +12095,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1910782862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11916,7 +12174,7 @@ GameObject:
   - component: {fileID: 1944310910}
   m_Layer: 0
   m_Name: GridFloor(Clone) (49)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11957,6 +12215,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1944310911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12034,7 +12294,7 @@ GameObject:
   - component: {fileID: 1955909216}
   m_Layer: 0
   m_Name: GridFloor(Clone) (42)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12075,6 +12335,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1955909217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12152,7 +12414,7 @@ GameObject:
   - component: {fileID: 1973298721}
   m_Layer: 0
   m_Name: GridFloor(Clone) (63)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12193,6 +12455,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1973298722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12270,7 +12534,7 @@ GameObject:
   - component: {fileID: 1982735786}
   m_Layer: 0
   m_Name: GridFloor(Clone) (83)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12311,6 +12575,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1982735787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12388,7 +12654,7 @@ GameObject:
   - component: {fileID: 1999474358}
   m_Layer: 0
   m_Name: GridFloor(Clone) (88)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12429,6 +12695,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &1999474359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12506,7 +12774,7 @@ GameObject:
   - component: {fileID: 2047485332}
   m_Layer: 0
   m_Name: GridFloor(Clone) (62)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12547,6 +12815,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2047485333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12624,7 +12894,7 @@ GameObject:
   - component: {fileID: 2105094901}
   m_Layer: 0
   m_Name: GridFloor(Clone) (79)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12665,6 +12935,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2105094902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12742,7 +13014,7 @@ GameObject:
   - component: {fileID: 2105672758}
   m_Layer: 0
   m_Name: GridFloor(Clone) (43)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12783,6 +13055,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2105672759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12860,7 +13134,7 @@ GameObject:
   - component: {fileID: 2111954682}
   m_Layer: 0
   m_Name: GridFloor(Clone) (71)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12901,6 +13175,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2111954683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12963,6 +13239,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111954680}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2119669170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119669171}
+  m_Layer: 0
+  m_Name: Weapons
+  m_TagString: Weapons
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119669171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119669170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36465323, y: 1.3274845, z: -1.01693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128992915
 GameObject:
   m_ObjectHideFlags: 0
@@ -12978,7 +13284,7 @@ GameObject:
   - component: {fileID: 2128992917}
   m_Layer: 0
   m_Name: GridFloor(Clone) (69)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13019,6 +13325,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2128992918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13096,7 +13404,7 @@ GameObject:
   - component: {fileID: 2137687684}
   m_Layer: 0
   m_Name: GridFloor(Clone) (89)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13137,6 +13445,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2137687685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13214,7 +13524,7 @@ GameObject:
   - component: {fileID: 2137785717}
   m_Layer: 0
   m_Name: GridFloor(Clone) (47)
-  m_TagString: GridFloor
+  m_TagString: MainGridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13255,6 +13565,8 @@ MonoBehaviour:
   grid: {fileID: 318706264}
   previousCell: {fileID: 0}
   turretPrefab: {fileID: 4037978662415888286, guid: fd13af99ea3561748b4048e6448e6df4, type: 3}
+  wall: 0
+  turret: 0
 --- !u!65 &2137785718
 BoxCollider:
   m_ObjectHideFlags: 0

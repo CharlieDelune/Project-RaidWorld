@@ -20,7 +20,7 @@ public class Base : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
             {
-                if (hit.transform.gameObject.tag == "GridFloor"){
+                if (hit.transform.gameObject.tag == "MainGridFloor"){
                     GridCell cell = hit.transform.gameObject.GetComponent<GridCell>();
                     cell.buildable = false;
                     foreach(GridCell neighbor in cell.GetNeighbors())

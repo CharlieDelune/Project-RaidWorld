@@ -6,26 +6,29 @@ public class Spawner : MonoBehaviour, Observer
 {
     public float spawnTime;
     public List<GameObject> spawnWave;
+    [SerializeField]
+    private Globals settings;
     private float timeUntilSpawn;
     [SerializeField]
     private GameObject unitParent;
     private List<GridCell> path;
     [SerializeField]
     private Base baseScript;
-    private Grid gridCreator;
+    [SerializeField]
+    private Grid mainGrid;
 
     private bool setUpObservers;
     private bool searchingForGrid;
     
     void Start()
     {
+        settings = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
+        mainGrid = settings.mainGrid;
         timeUntilSpawn = spawnTime;
         path = null;
 
         setUpObservers = false;
         searchingForGrid = true;
-
-        gridCreator = GameObject.FindGameObjectsWithTag("GridHolder")[0].GetComponent<Grid>();
     }
 
     
@@ -36,7 +39,7 @@ public class Spawner : MonoBehaviour, Observer
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
             {
-                if (hit.transform.gameObject.tag == "GridFloor"){
+                if (hit.transform.gameObject.tag == "MainGridFloor"){
                     GridCell cell = hit.transform.gameObject.GetComponent<GridCell>();
                     cell.buildable = false;
                     foreach(GridCell neighbor in cell.GetNeighbors())
@@ -57,7 +60,7 @@ public class Spawner : MonoBehaviour, Observer
         }
         if (path == null)
         {
-            path = Pathfinder.FindPath((int)transform.position.x, (int)transform.position.z, (int)baseScript.transform.position.x, (int)baseScript.transform.position.z);
+            path = Pathfinder.FindPath(mainGrid, (int)transform.position.x, (int)transform.position.z, (int)baseScript.transform.position.x, (int)baseScript.transform.position.z);
             Pathfinder.DrawPath(path, Color.blue);
         }
 
@@ -74,8 +77,8 @@ public class Spawner : MonoBehaviour, Observer
         switch(ev)
         {
             case PublisherEvent.BuiltWall:
-                path = Pathfinder.FindPath((int)transform.position.x, (int)transform.position.z, (int)baseScript.transform.position.x, (int)baseScript.transform.position.z);
-                gridCreator.ResetGridColors();
+                path = Pathfinder.FindPath(mainGrid, (int)transform.position.x, (int)transform.position.z, (int)baseScript.transform.position.x, (int)baseScript.transform.position.z);
+                mainGrid.ResetGridColors();
                 Pathfinder.DrawPath(path, Color.blue);
                 break;
             default:
@@ -95,9 +98,9 @@ public class Spawner : MonoBehaviour, Observer
 
     private void SetUpObservers()
     {
-        foreach(GridCell cell in gridCreator.gridCells)
+        foreach(GridCell cell in mainGrid.gridCells)
         {
-            cell.AddObserver(this);
+            Publisher.AddObserver(this);
         }
         setUpObservers = true;
     }
