@@ -81,6 +81,11 @@ public class Spawner : MonoBehaviour, Observer
                 mainGrid.ResetGridColors();
                 Pathfinder.DrawPath(path, Color.blue);
                 break;
+            case PublisherEvent.RemovedWall:
+                path = Pathfinder.FindPath(mainGrid, (int)transform.position.x, (int)transform.position.z, (int)baseScript.transform.position.x, (int)baseScript.transform.position.z);
+                mainGrid.ResetGridColors();
+                Pathfinder.DrawPath(path, Color.blue);
+                break;
             default:
                 break;
         }

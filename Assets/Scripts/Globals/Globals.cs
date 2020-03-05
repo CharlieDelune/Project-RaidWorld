@@ -50,6 +50,7 @@ public class Globals : MonoBehaviour
         GameObject newWall = Instantiate(wallPrefab, new Vector3(cell.x, 0.5f, cell.z), Quaternion.identity);
         newWall.transform.SetParent(wallHolder.transform, true);
         walls[cell.x, cell.z] = newWall;
+        cell.ResetCellColor();
         Publisher.Notify(PublisherEvent.BuiltWall);
     }
 
@@ -60,6 +61,7 @@ public class Globals : MonoBehaviour
         GameObject oldWall = walls[cell.x, cell.z];
         Destroy(oldWall);
         walls[cell.x, cell.z] = null;
+        cell.ResetCellColor();
         Publisher.Notify(PublisherEvent.RemovedWall);
     }
 

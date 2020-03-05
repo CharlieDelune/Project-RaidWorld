@@ -24,7 +24,7 @@ public class GridCell : MonoBehaviour, INodable
     void Start()
     {
         globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
-        rend =GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
         color = Color.white;
         passable = true;
         buildable = true;
@@ -93,6 +93,11 @@ public class GridCell : MonoBehaviour, INodable
             color = inputColor;
             rend.material.color = color;
         }
+    }
+
+    public void ResetCellColor()
+    {
+        this.SetColor(Color.white);
     }
 
     public void ResetCell()
