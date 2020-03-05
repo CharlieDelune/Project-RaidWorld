@@ -64,6 +64,11 @@ public class EnemyUnit : MonoBehaviour, Observer
                     SetTargetPosition(target.transform.position);
                 }
                 break;
+            case PublisherEvent.RemovedWall:
+                if(!attacking){
+                    SetTargetPosition(target.transform.position);
+                }
+                break;
             default:
                 break;
         }
