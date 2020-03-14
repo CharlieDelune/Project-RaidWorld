@@ -12,6 +12,9 @@ TagManager:
   - Globals
   - Walls
   - Weapons
+  - PreviewGrid
+  - PreviewGridFloor
+  - Spawner
   layers:
   - Default
   - TransparentFX

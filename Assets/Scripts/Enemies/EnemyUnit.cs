@@ -7,9 +7,8 @@ public class EnemyUnit : MonoBehaviour, Observer
     public float speed;
     public float attackSpeed;
     public int damage;
-    private Globals settings;
+    private Globals globals;
     private Base target;
-    private Grid mainGrid;
     private List<Vector3> pathVectorList;
     private int currentPathIndex;
     [SerializeField]
@@ -31,16 +30,11 @@ public class EnemyUnit : MonoBehaviour, Observer
 
     void Start()
     {
-        settings = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
-        target = settings.mainBase;
-        mainGrid = settings.mainGrid;
+        globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
+        target = globals.mainBase;
         SetTargetPosition(target.transform.position);
         timeToAttack = 0;
-
-        foreach(GridCell cell in mainGrid.gridCells)
-        {
-            Publisher.AddObserver(this);
-        }
+        Publisher.AddObserver(this);
     }
 
     void Update()
@@ -127,7 +121,7 @@ public class EnemyUnit : MonoBehaviour, Observer
     public void SetTargetPosition(Vector3 targetPosition)
     {
         currentPathIndex = 0;
-        pathVectorList = Pathfinder.FindPath(mainGrid, transform.position, target.transform.position);
+        pathVectorList = globals.FindVectorPath(transform.position, target.transform.position);
 
         if (pathVectorList != null && pathVectorList.Count > 1)
         {

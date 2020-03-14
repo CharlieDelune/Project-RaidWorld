@@ -23,6 +23,12 @@ public class Grid : MonoBehaviour
         return (xSize - 1, zSize - 1);
     }
 
+    public void SetGridSize(int x, int z)
+    {
+        xSize = x;
+        zSize = z;
+    }
+
     public GridCell GetGridCell(int x, int z)
     {
         int start = x * xSize;

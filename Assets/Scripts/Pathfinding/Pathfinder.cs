@@ -161,16 +161,6 @@ public static class Pathfinder
         }
     }
 
-    public static void DrawPath(List<GridCell> incomingPath, Color col)
-    {
-        if (incomingPath != null){
-            foreach (GridCell cell in incomingPath)
-            {
-                cell.SetColor(col);
-            }
-        }
-    }
-
     public static void ResetPath(Grid grid)
     {
         grid.ResetGridColors();

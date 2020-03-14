@@ -8,17 +8,14 @@ public class GridCell : MonoBehaviour, INodable
     public bool buildable;
     public int x, z, gCost, hCost, fCost;
     public Grid grid;
-    public GridCell previousCell;
     public int nodeValue {get; set;}
     public int id { get; set; }
-    public GameObject turretPrefab;
     public bool wall;
     public bool turret;
-
+    [SerializeField]
     private List<GridCell> neighbors;
     private Renderer rend;
     private Color color;
-    private GameObject currentTurret;
     private Globals globals;
 
     void Start()
@@ -28,8 +25,8 @@ public class GridCell : MonoBehaviour, INodable
         color = Color.white;
         passable = true;
         buildable = true;
-        this.x = (int)this.gameObject.transform.localPosition.x;
-        this.z = (int)this.gameObject.transform.localPosition.z;
+        x = (int)gameObject.transform.localPosition.x;
+        z = (int)gameObject.transform.localPosition.z;
         neighbors = grid.GetNeighborsForCell(x, z);
         nodeValue = 0;
         id = GetInstanceID();
@@ -39,26 +36,31 @@ public class GridCell : MonoBehaviour, INodable
 
     void OnMouseEnter()
     {
-        if (this.buildable)
+        if (globals.GetGameMode() == GameMode.BuildWall && buildable)
         {
             rend.material.color = Color.green;
+            globals.PreviewPath(this);
         }
     }
 
     void OnMouseExit()
     {
         rend.material.color = color;
+        globals.UnpreviewPath(this);
     }
 
     void OnMouseDown()
     {
-        if (this.buildable)
+        if (globals.GetGameMode() == GameMode.BuildWall && buildable)
         {
             if (passable)
             {
                 globals.BuildWall(this);
             }
-            else if (!passable && !turret)
+        }
+        if (globals.GetGameMode() == GameMode.DestroyWall && wall)
+        {
+            if (!passable)
             {
                 globals.DestroyWall(this);
             }

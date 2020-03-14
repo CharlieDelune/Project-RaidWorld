@@ -7,6 +7,8 @@ public class Base : MonoBehaviour
     public int health;
 
     private bool searchingForGrid;
+    [SerializeField]
+    private Globals globals;
 
     void Start()
     {
@@ -15,25 +17,10 @@ public class Base : MonoBehaviour
 
     void Update()
     {
-        if (searchingForGrid)
+        if(searchingForGrid)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down,out hit, 1))
-            {
-                if (hit.transform.gameObject.tag == "MainGridFloor"){
-                    GridCell cell = hit.transform.gameObject.GetComponent<GridCell>();
-                    cell.buildable = false;
-                    foreach(GridCell neighbor in cell.GetNeighbors())
-                    {
-                        neighbor.buildable = false;
-                    }
-                    searchingForGrid = false;
-                }
-            }
-            else{
-                Debug.Log("Base is off the grid!");
-                Destroy(gameObject);
-            }
+            globals.PlaceBaseOrSpawner((int)transform.position.x, (int)transform.position.z);
+            searchingForGrid = false;
         }
     }
 
