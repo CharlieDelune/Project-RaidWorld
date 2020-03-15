@@ -25,6 +25,8 @@ public class Globals : MonoBehaviour
     [SerializeField]
     private Material pathMaterial;
 
+    public int bits { get; set; }
+
     private bool pathDrawn;
 
     // Start is called before the first frame update
@@ -35,6 +37,7 @@ public class Globals : MonoBehaviour
         walls = new GameObject[mainGrid.GetGridSize().x + 1, mainGrid.GetGridSize().z + 1];
         turrets = new GameObject[mainGrid.GetGridSize().x + 1, mainGrid.GetGridSize().z + 1];
         gameMode = GameMode.None;
+        bits = 0;
     }
 
     // Update is called once per frame
