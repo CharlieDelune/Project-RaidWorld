@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     public int range;
     public int damage;
     public int fireSpeed;
     public int armorIgnore;
     public int shieldIgnore;
+    public int cost;
     private float timeToAttack;
     [SerializeField]
     private List<EnemyUnit> enemiesInRange;
