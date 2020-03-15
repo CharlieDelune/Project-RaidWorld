@@ -51,19 +51,18 @@ public class GridCell : MonoBehaviour, INodable
 
     void OnMouseDown()
     {
-        if (globals.GetGameMode() == GameMode.BuildWall && buildable)
+        if (globals.GetGameMode() == GameMode.BuildWall 
+        && buildable
+        && passable
+        && globals.CanAfford(Database.walls[globals.selectedWallIndex].cost))
         {
-            if (passable)
-            {
-                globals.BuildWall(this);
-            }
+            globals.BuildWall(this);
         }
-        if (globals.GetGameMode() == GameMode.DestroyWall && wall)
+        if (globals.GetGameMode() == GameMode.DestroyWall 
+        && wall
+        && !passable)
         {
-            if (!passable)
-            {
-                globals.DestroyWall(this);
-            }
+            globals.DestroyWall(this);
         }
     }
 

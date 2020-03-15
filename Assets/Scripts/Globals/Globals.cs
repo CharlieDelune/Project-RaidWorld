@@ -10,6 +10,8 @@ public class Globals : MonoBehaviour
     public Spawner spawner;
     public GameObject mainPathHolder;
     public GameObject previewPathHolder;
+    public int selectedWallIndex;
+    public int selectedWeaponIndex;
 
     private GameMode gameMode;
     [SerializeField]
@@ -37,7 +39,9 @@ public class Globals : MonoBehaviour
         walls = new GameObject[mainGrid.GetGridSize().x + 1, mainGrid.GetGridSize().z + 1];
         turrets = new GameObject[mainGrid.GetGridSize().x + 1, mainGrid.GetGridSize().z + 1];
         gameMode = GameMode.None;
-        bits = 0;
+        bits = 25;
+        selectedWallIndex = 0;
+        selectedWeaponIndex = 0;
     }
 
     // Update is called once per frame
@@ -81,6 +85,7 @@ public class Globals : MonoBehaviour
         GridCell previewCell = previewGrid.GetGridCell(cell.x, cell.z);
         previewCell.passable = false;
         previewCell.wall = true;
+        RemoveBits(Database.walls[selectedWallIndex].cost);
         Publisher.Notify(PublisherEvent.BuiltWall);
     }
 
@@ -95,6 +100,7 @@ public class Globals : MonoBehaviour
         GridCell previewCell = previewGrid.GetGridCell(cell.x, cell.z);
         previewCell.passable = true;
         previewCell.wall = false;
+        AddBits(Database.walls[selectedWallIndex].cost / 2);
         Publisher.Notify(PublisherEvent.RemovedWall);
     }
 
@@ -104,6 +110,7 @@ public class Globals : MonoBehaviour
         GameObject newTurret = Instantiate(turretPrefab, new Vector3(cell.x, 1.5f, cell.z), Quaternion.identity);
         newTurret.transform.SetParent(weaponHolder.transform, true);
         turrets[cell.x, cell.z] = newTurret;
+        RemoveBits(Database.weapons[selectedWeaponIndex].cost);
         Publisher.Notify(PublisherEvent.BuiltTurret);
     }
 
@@ -113,6 +120,7 @@ public class Globals : MonoBehaviour
         GameObject oldTurret = turrets[cell.x, cell.z];
         Destroy(oldTurret);
         turrets[cell.x, cell.z] = null;
+        AddBits(Database.weapons[selectedWeaponIndex].cost / 2);
         Publisher.Notify(PublisherEvent.RemovedTurret);
     }
 
@@ -187,6 +195,20 @@ public class Globals : MonoBehaviour
     public void AddBits(int toAdd)
     {
         bits += toAdd;
+    }
+
+    public void RemoveBits(int toRemove)
+    {
+        bits -= toRemove;
+    }
+
+    public bool CanAfford(int cost)
+    {
+        if (bits - cost < 0)
+        {
+            return false;
+        }
+        return true;
     }
 }
 public enum GameMode {
