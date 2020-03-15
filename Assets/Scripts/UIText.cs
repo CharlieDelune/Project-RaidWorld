@@ -6,18 +6,23 @@ using UnityEngine;
 public class UIText : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI textMesh;
+    private TextMeshProUGUI healthText;
+    [SerializeField]
+    private TextMeshProUGUI bitsText;
     [SerializeField]
     private Base baseInfo;
+    [SerializeField]
+    private Globals globals;
 
     void Start()
     {
-        textMesh.text = "Base Health: " + baseInfo.health;
+        healthText.text = "Base Health: " + baseInfo.health;
     }
 
 
     void Update()
     {
-        textMesh.text = "Base Health: " + baseInfo.health;
+        healthText.text = "Base Health: " + baseInfo.health;
+        bitsText.text = "Bits: " + globals.bits;
     }
 }

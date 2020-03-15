@@ -111,11 +111,10 @@ MonoBehaviour:
   speed: 2
   attackSpeed: 2
   damage: 1
-  target: {fileID: 0}
   moving: 0
   attacking: 0
   health: 10
   armor: 0
   shield: 0
-  worth: 1
+  worth: 10
   flying: 0

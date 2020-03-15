@@ -22,7 +22,7 @@ public class GridCell : MonoBehaviour, INodable
     {
         globals = GameObject.FindGameObjectWithTag("Globals").GetComponent<Globals>();
         rend = GetComponent<Renderer>();
-        color = Color.white;
+        color = new Color(0.66f, 0.66f, 0.66f, 1);
         passable = true;
         buildable = true;
         x = (int)gameObject.transform.localPosition.x;
