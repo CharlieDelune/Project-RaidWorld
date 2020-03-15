@@ -183,6 +183,11 @@ public class Globals : MonoBehaviour
             neighbor.buildable = false;
         }
     }
+
+    public void AddBits(int toAdd)
+    {
+        bits += toAdd;
+    }
 }
 public enum GameMode {
     None, BuildWall, BuildTurret, DestroyWall, DestroyTurret
