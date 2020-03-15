@@ -31,5 +31,6 @@ public enum PublisherEvent
     BuiltTurret,
     RemovedWall,
     RemovedTurret,
-    MouseOverBuildableCell
+    MouseOverBuildableCell,
+    GameModeChanged
 }

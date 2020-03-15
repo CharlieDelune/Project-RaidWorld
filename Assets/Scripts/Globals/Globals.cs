@@ -60,6 +60,7 @@ public class Globals : MonoBehaviour
         gameMode = newMode;
         LineRenderer line = previewPathHolder.GetComponent<LineRenderer>();
         line.positionCount = 0;
+        Publisher.Notify(PublisherEvent.GameModeChanged);
     }
 
     public GameMode GetGameMode(){
@@ -84,7 +85,7 @@ public class Globals : MonoBehaviour
     {
         cell.passable = true;
         cell.wall = false;
-        GameObject oldWall = walls[cell.x, cell.z];
+        GameObject oldWall = walls[cell.x, cell.z]; 
         Destroy(oldWall);
         walls[cell.x, cell.z] = null;
         DrawPath(FindVectorPath(spawner.transform.position, mainBase.transform.position));
@@ -140,7 +141,7 @@ public class Globals : MonoBehaviour
     public void PreviewPath(GridCell cell)
     {
         previewGrid.GetGridCell(cell.x, cell.z).passable = false;
-        List<Vector3> incomingPath = Pathfinder.FindPath(previewGrid, mainBase.transform.position, spawner.transform.position);
+        List<Vector3> incomingPath = Pathfinder.FindPath(previewGrid, spawner.transform.position, mainBase.transform.position);
         if (incomingPath != null){
             LineRenderer line = previewPathHolder.GetComponent<LineRenderer>();
             line.positionCount = 0;
@@ -161,7 +162,11 @@ public class Globals : MonoBehaviour
 
     public void UnpreviewPath(GridCell cell)
     {
-        previewGrid.GetGridCell(cell.x, cell.z).passable = true;
+        GridCell previewGridCell = previewGrid.GetGridCell(cell.x, cell.z);
+        if(!previewGridCell.wall && previewGridCell.buildable)
+        {
+            previewGrid.GetGridCell(cell.x, cell.z).passable = true;
+        }
         LineRenderer line = previewPathHolder.GetComponent<LineRenderer>();
         line.positionCount = 0;
     }
