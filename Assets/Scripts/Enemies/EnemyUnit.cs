@@ -136,6 +136,7 @@ public class EnemyUnit : MonoBehaviour, Observer
         if (health <= 0)
         {
             Destroy(gameObject);
+            globals.AddBits(worth);
         }
     }
 
